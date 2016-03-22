@@ -1,0 +1,61 @@
+@base_font_size = 16px;
+@base_font_family = "Varela Round";
+
+// Media query breakpoints
+@size_for_phablet = 32rem;
+@size_for_tablet = 48rem;
+@size_for_laptop = 64rem;
+@size_for_desktop = 80rem;
+
+// Media query conditions
+@phablet = ~"screen and (min-width: @{size_for_phablet})";
+@tablet = ~"screen and (min-width: @{size_for_tablet})";
+@laptop = ~"screen and (min-width: @{size_for_laptop})";
+@desktop = ~"screen and (min-width: @{size_for_desktop})";
+
+*{
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: @base_font_size;
+	font-family: @base_font_family, sans-serif;
+}
+
+.main-container{
+	
+	width: 100%;
+
+	@media @tablet{
+		width: 48rem;
+	}
+	@media @laptop{
+		width: 64rem;
+	}
+	@media @desktop{
+		width: 80rem;
+	}
+}
+
+.fluid-container{
+	width: 100%;
+}
+
+.message-box{
+
+	width: 80%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 0px 5px 0px black;
+
+	@media @phablet{
+		width: 24rem;
+	}
+	
+	p{
+		text-align: center;
+	}
+}

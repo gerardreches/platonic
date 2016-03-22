@@ -12,5 +12,18 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+
+	mix.browserSync({
+        proxy: 'platonic.dev'
+    });
+
+	/*
+    mix.sass('platonic.scss', 'public/css/platonic.css');
+
+    mix.styles([
+        'normalize.css',
+        'platonic.css'
+    ], 'resources/assets/css', 'public/css');
+	*/
+
 });
