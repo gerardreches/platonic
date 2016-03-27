@@ -13,6 +13,7 @@
 
 Route::get('/', function () {
 	compile_css();
+	dd("prova", session()->all());
     return view('welcome');
 });
 

@@ -160,7 +160,7 @@ return [
         /*
          * Extra Packages Service Providers...
          */
-        
+        Caffeinated\Modules\ModulesServiceProvider::class,
 
     ],
 
@@ -209,7 +209,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         // Extra Package Aliases
-
+        'Module' => Caffeinated\Modules\Facades\Module::class,
     ],
 
 ];
