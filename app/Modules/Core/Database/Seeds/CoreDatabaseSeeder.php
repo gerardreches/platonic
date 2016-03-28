@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\Core\Database\Seeds;
+namespace Platonic\Modules\Core\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
@@ -15,7 +15,7 @@ class CoreDatabaseSeeder extends Seeder
 	{
 		Model::unguard();
 
-		// $this->call('App\Modules\Core\Database\Seeds\FoobarTableSeeder');
+		// $this->call('Platonic\Modules\Core\Database\Seeds\FoobarTableSeeder');
 	}
 
 }

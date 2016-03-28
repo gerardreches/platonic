@@ -1,9 +1,9 @@
 <?php
-namespace App\Modules\Blog\Http\Controllers;
+namespace Platonic\Modules\Blog\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use App\Modules\Blog\Models\Post;
+use Platonic\Http\Controllers\Controller;
+use Platonic\Http\Requests;
+use Platonic\Modules\Blog\Models\Post;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller

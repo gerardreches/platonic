@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Platonic\Events;
 
 abstract class Event
 {

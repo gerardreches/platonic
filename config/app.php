@@ -151,11 +151,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-        App\Providers\HelperServiceProvider::class,
+        Platonic\Providers\AppServiceProvider::class,
+        Platonic\Providers\AuthServiceProvider::class,
+        Platonic\Providers\EventServiceProvider::class,
+        Platonic\Providers\RouteServiceProvider::class,
+        Platonic\Providers\HelperServiceProvider::class,
 
         /*
          * Extra Packages Service Providers...

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CommentsTableSeeder extends Seeder
+class ../../app/Modules/Core/Database/Seeds/UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

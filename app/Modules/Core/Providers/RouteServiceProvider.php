@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\Core\Providers;
+namespace Platonic\Modules\Core\Providers;
 
 use Caffeinated\Modules\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;
@@ -13,7 +13,7 @@ class RouteServiceProvider extends ServiceProvider
 	 *
 	 * @var string
 	 */
-	protected $namespace = 'App\Modules\Core\Http\Controllers';
+	protected $namespace = 'Platonic\Modules\Core\Http\Controllers';
 
 	/**
 	 * Define your module's route model bindings, pattern filters, etc.

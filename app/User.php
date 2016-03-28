@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Platonic;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

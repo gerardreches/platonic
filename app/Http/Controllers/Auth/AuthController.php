@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Platonic\Http\Controllers\Auth;
 
-use App\User;
+use Platonic\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use Platonic\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

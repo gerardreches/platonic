@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\Blog\Providers;
+namespace Platonic\Modules\Blog\Providers;
 
 use App;
 use Config;
@@ -19,7 +19,7 @@ class BlogServiceProvider extends ServiceProvider
 		// This service provider is a convenient place to register your modules
 		// services in the IoC container. If you wish, you may make additional
 		// methods or service providers to keep the code more focused and granular.
-		App::register('App\Modules\Blog\Providers\RouteServiceProvider');
+		App::register('Platonic\Modules\Blog\Providers\RouteServiceProvider');
 
 		$this->registerNamespaces();
 	}
