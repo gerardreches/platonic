@@ -1,16 +1,16 @@
 <?php
 
-use Illuminate\Database\Seeder;
+namespace Platonic\Modules\Blog\Database\Seeds;
 
-class ../../app/Modules/Blog/Database/Seeds/CategoriesTableSeeder extends Seeder
+use Illuminate\Database\Seeder;
+use Platonic\Modules\Blog\Models\Category;
+
+class CategoriesTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
     public function run()
     {
-        //
+        factory(Category::class, 50)->create();
     }
+
 }

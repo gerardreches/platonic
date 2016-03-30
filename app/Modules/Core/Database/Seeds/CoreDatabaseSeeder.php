@@ -1,21 +1,37 @@
 <?php
 namespace Platonic\Modules\Core\Database\Seeds;
 
-use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CoreDatabaseSeeder extends Seeder
 {
-	/**
-	 * Run the database seeds.
-	 *
-	 * @return void
-	 */
+	
+	protected $toTruncate = [
+		'core_users',
+		'core_options'
+	];
+
 	public function run()
 	{
 		Model::unguard();
 
-		// $this->call('Platonic\Modules\Core\Database\Seeds\FoobarTableSeeder');
+		$this->truncate_tables();
+
+		$this->call('Platonic\Modules\Core\Database\Seeds\UsersTableSeeder');
+	}
+
+	protected function truncate_tables(){
+
+		DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+
+		foreach($this->toTruncate as $table){
+			DB::table($table)->truncate();
+		}
+
+		DB::statement('SET FOREIGN_KEY_CHECKS = 1');
+
 	}
 
 }

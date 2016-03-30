@@ -1,10 +1,10 @@
 <?php
 namespace Platonic\Modules\Blog\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Platonic\Http\Controllers\Controller;
 use Platonic\Http\Requests;
 use Platonic\Modules\Blog\Models\Post;
-use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {

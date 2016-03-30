@@ -3,14 +3,14 @@
 namespace Platonic\Modules\Blog\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-use Platonic\Modules\Blog\Models\Tag;
+use Platonic\Modules\Blog\Models\PostTag;
 
-class TagsTableSeeder extends Seeder
+class PostTagTableSeeder extends Seeder
 {
     
     public function run()
     {
-        factory(Tag::class, 50)->create();
+        factory(PostTag::class, 50)->create();
     }
 
 }

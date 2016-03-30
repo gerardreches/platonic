@@ -1,18 +1,15 @@
 <?php
 
-//require "lessc.inc.php";
-
 if (! function_exists('compile_css')) {
-	function compile_css(){
 
-		echo_pretty_message("Compiling...");
+	function compile_css($formatType){
 
 		$input = "platonic.less";
 		$output = "platonic.css";
 
 		$parser = new lessc;
 		$parser->setPreserveComments(true);
-		$parser->setFormatter("compressed"); //lessjs (default), compressed, classic
+		$parser->setFormatter($formatType); //lessjs (default), compressed, classic
 
 		$parser->setVariables(array(
 			"base_font_size" => "16px",
@@ -27,5 +24,3 @@ if (! function_exists('compile_css')) {
 
 	}
 }
-
-?>

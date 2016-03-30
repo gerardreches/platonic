@@ -1,16 +1,16 @@
 <?php
 
-use Illuminate\Database\Seeder;
+namespace Platonic\Modules\Core\Database\Seeds;
 
-class ../../app/Modules/Core/Database/Seeds/UsersTableSeeder extends Seeder
+use Illuminate\Database\Seeder;
+use Platonic\Modules\Core\Models\User;
+
+class UsersTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
     public function run()
     {
-        //
+        factory(User::class, 50)->create();
     }
+
 }

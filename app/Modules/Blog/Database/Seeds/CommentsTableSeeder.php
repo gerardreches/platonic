@@ -1,16 +1,16 @@
 <?php
 
-use Illuminate\Database\Seeder;
+namespace Platonic\Modules\Blog\Database\Seeds;
 
-class ../../app/Modules/Blog/Database/Seeds/CommentsTableSeeder extends Seeder
+use Illuminate\Database\Seeder;
+use Platonic\Modules\Blog\Models\Comment;
+
+class CommentsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
     public function run()
     {
-        //
+        factory(Comment::class, 50)->create();
     }
+
 }

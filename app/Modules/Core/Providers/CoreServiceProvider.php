@@ -2,10 +2,11 @@
 namespace Platonic\Modules\Core\Providers;
 
 use App;
+use Caffeinated\Modules\Facades\Module;
 use Config;
+use Illuminate\Support\ServiceProvider;
 use Lang;
 use View;
-use Illuminate\Support\ServiceProvider;
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -20,6 +21,7 @@ class CoreServiceProvider extends ServiceProvider
 		// services in the IoC container. If you wish, you may make additional
 		// methods or service providers to keep the code more focused and granular.
 		App::register('Platonic\Modules\Core\Providers\RouteServiceProvider');
+		App::register('Platonic\Modules\Core\Providers\FactoryServiceProvider');
 
 		$this->registerNamespaces();
 	}

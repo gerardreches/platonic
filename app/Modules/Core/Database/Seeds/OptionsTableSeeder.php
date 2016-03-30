@@ -1,14 +1,12 @@
 <?php
 
+namespace Platonic\Modules\Core\Database\Seeds;
+
 use Illuminate\Database\Seeder;
 
-class ../../app/Modules/Core/Database/Seeds/OptionsTableSeeder extends Seeder
+class OptionsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
     public function run()
     {
         //

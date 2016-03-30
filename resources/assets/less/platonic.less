@@ -15,12 +15,18 @@
 
 *{
 	padding: 0;
+	margin: 0;
 	box-sizing: border-box;
 }
 
 html{
 	font-size: @base_font_size;
 	font-family: @base_font_family, sans-serif;
+	line-height: 1.5rem;
+}
+
+body{
+	background-color: white;
 }
 
 .main-container{
@@ -29,6 +35,7 @@ html{
 
 	@media @tablet{
 		width: 48rem;
+		margin: auto; 
 	}
 	@media @laptop{
 		width: 64rem;
@@ -58,4 +65,8 @@ html{
 	p{
 		text-align: center;
 	}
+}
+
+p{
+	margin-bottom: 1.2rem;
 }

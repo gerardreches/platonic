@@ -20,7 +20,7 @@ class BlogServiceProvider extends ServiceProvider
 		// services in the IoC container. If you wish, you may make additional
 		// methods or service providers to keep the code more focused and granular.
 		App::register('Platonic\Modules\Blog\Providers\RouteServiceProvider');
-
+		
 		$this->registerNamespaces();
 	}
 

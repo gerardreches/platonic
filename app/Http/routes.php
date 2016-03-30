@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-	compile_css();
+	compile_css('lessjs');
 	dd("prova", session()->all());
     return view('welcome');
 });

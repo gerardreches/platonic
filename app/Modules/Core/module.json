@@ -4,5 +4,6 @@
 	"namespace": "Core",
 	"version": "1.0",
 	"description": "This is the core module for Platonic CMS.",
-	"enabled": true
+	"enabled": true,
+	"order": 1
 }

@@ -4,6 +4,7 @@ namespace Platonic\Modules\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Platonic\Modules\Core\Models\User;
 
 class Post extends Model
 {
@@ -21,6 +22,10 @@ class Post extends Model
     	'user_id',
     	'timestamps'
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
     // If you want to override the default primary key.
     //$primaryKey = 'id';
