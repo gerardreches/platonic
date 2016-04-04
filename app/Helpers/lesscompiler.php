@@ -1,8 +1,8 @@
 <?php
 
-if (! function_exists('compile_css')) {
+if (! function_exists('compile_less')) {
 
-	function compile_css($formatType){
+	function compile_less($formatType){
 
 		$input = "platonic.less";
 		$output = "platonic.css";

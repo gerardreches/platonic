@@ -12,8 +12,10 @@
 */
 
 Route::group(['prefix' => 'core'], function() {
+
 	Route::get('/', function() {
-		dd('This is the Core module index page.');
+		return view('core::dashboard');
 	});
 	Route::get('/users/{id}', 'UsersController@show');
+
 });

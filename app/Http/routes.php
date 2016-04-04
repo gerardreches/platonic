@@ -10,10 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+compile_less('lessjs');
 
 Route::get('/', function () {
-	compile_css('lessjs');
-	dd("prova", session()->all());
     return view('welcome');
 });
 
