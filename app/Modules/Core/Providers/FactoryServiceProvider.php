@@ -13,11 +13,9 @@ class FactoryServiceProvider extends ServiceProvider
 	
 	public function register()
 	{
-		/*
-		|	This will load all your model factory files from the Core module
-		|	Database/Factories folder. ModelFactory.php will load the other 
-		|	enabled modules.
-		*/
+		//	This will load all your model factory files from the Core module
+		//	Database/Factories folder. ModelFactory.php will load the other 
+		//	enabled modules.
 
 		$this->app->singleton(EloquentFactory::class, function ($app) {
 			$faker = App::make(Faker::class);

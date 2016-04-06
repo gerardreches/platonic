@@ -1,4 +1,5 @@
 <?php
+
 namespace Platonic\Modules\Core\Providers;
 
 use App;
@@ -6,22 +7,31 @@ use Caffeinated\Modules\Facades\Module;
 use Config;
 use Illuminate\Support\ServiceProvider;
 use Lang;
+use Platonic\Modules\Core\Components\Facades\DashboardMenu;
+use Platonic\Modules\Core\Components\Source\DashboardMenuItem;
 use View;
 
 class CoreServiceProvider extends ServiceProvider
 {
+	
 	/**
-	 * Register the Core module service provider.
-	 *
-	 * @return void
+	 * Add inside this function all the dashboard menu items for this module.
+	 */
+	public function boot(){
+		
+		DashboardMenu::addItem( new DashboardMenuItem('Resume','fa fa-tachometer', route('core::dashboard') ) );
+
+	}
+
+	/**
+	 * Register module services in the IoC container.
 	 */
 	public function register()
 	{
-		// This service provider is a convenient place to register your modules
-		// services in the IoC container. If you wish, you may make additional
-		// methods or service providers to keep the code more focused and granular.
 		App::register('Platonic\Modules\Core\Providers\RouteServiceProvider');
+		App::register('Platonic\Modules\Core\Providers\HelperServiceProvider');
 		App::register('Platonic\Modules\Core\Providers\FactoryServiceProvider');
+		App::register('Platonic\Modules\Core\Providers\FacadeServiceProvider');
 
 		$this->registerNamespaces();
 	}
@@ -38,4 +48,5 @@ class CoreServiceProvider extends ServiceProvider
 		View::addNamespace('core', base_path('resources/views/vendor/core'));
 		View::addNamespace('core', realpath(__DIR__.'/../Resources/Views'));
 	}
+
 }

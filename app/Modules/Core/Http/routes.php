@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Module Routes
@@ -11,11 +12,13 @@
 |
 */
 
-Route::group(['prefix' => 'core'], function() {
+Route::group(['prefix' => 'core', 'as' => 'core::'], function() {
 
-	Route::get('/', function() {
+	Route::get('/', ['as' => 'dashboard', function() {
+		compile_less();
 		return view('core::dashboard');
-	});
+	}]);
+
 	Route::get('/users/{id}', 'UsersController@show');
 
 });

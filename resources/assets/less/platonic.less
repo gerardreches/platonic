@@ -1,5 +1,6 @@
 
 @import "mixins.less";
+@import "colors.less";
 
 //--------------------------------------------------------------------------
 // PLATONIC MAIN VARIABLES
@@ -65,6 +66,15 @@ body{
 	width: 100%;
 }
 
+.header{
+	width: 100%;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	vertical-align: middle;
+	color: white;
+}
+
 .message-box{
 
 	width: 80%;
@@ -87,6 +97,11 @@ p{
 	margin-bottom: 1.2rem;
 }
 
+a{
+	text-decoration: none;
+	color: black;
+}
+
 //--------------------------------------------------------------------------
 // PLATONIC SIDE MENU
 //--------------------------------------------------------------------------
@@ -99,7 +114,7 @@ p{
 	position: absolute;
 	left: 0;
 	overflow-y: hidden;
-	background-color: gray;
+	background-color: black;
 
 	ul{
 		width: 100%;
@@ -117,7 +132,17 @@ p{
 			background-color: black;
 
 			&:hover{
-				background-color: blue;
+				background-color: orange;
+				cursor: pointer;
+			}
+
+			a{
+				width: 100%;
+				height: 100%;
+				color: white;
+			}
+			i, span{
+				margin-left: 0.5rem;
 			}
 		}
 

@@ -2,7 +2,7 @@
 
 if (! function_exists('compile_less')) {
 
-	function compile_less($formatType){
+	function compile_less($formatType = 'lessjs'){
 
 		$input = "platonic.less";
 		$output = "platonic.css";

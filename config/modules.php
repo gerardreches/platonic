@@ -2,10 +2,28 @@
 
 return [
 
-    'paths' => [
-        'core' => [
-            'namespace' => 'App\Modules\\',
-            'path'      => app_path('Modules')
+    'helpers' => [
+    	'relative' => [
+            'namespace' => '\Helpers',
+        	'path' => '/Helpers'
+        ]
+    ],
+    'factories' => [
+    	'relative' => [
+            'namespace' => '\Database\Factories',
+        	'path' => '/Database/Factories'
+        ]
+    ],
+    'facades' => [
+    	'relative' => [
+            'namespace' => '\Components\Facades',
+        	'path' => '/Components/Facades'
+        ]
+    ],
+    'classes' => [
+    	'relative' => [
+            'namespace' => '\Components\Source',
+        	'path' => '/Components/Source'
         ]
     ],
 

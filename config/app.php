@@ -155,7 +155,6 @@ return [
         Platonic\Providers\AuthServiceProvider::class,
         Platonic\Providers\EventServiceProvider::class,
         Platonic\Providers\RouteServiceProvider::class,
-        Platonic\Providers\HelperServiceProvider::class,
 
         /*
          * Extra Packages Service Providers...
@@ -207,8 +206,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
-        // Extra Package Aliases
         'Module' => Caffeinated\Modules\Facades\Module::class,
     ],
 
