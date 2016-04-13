@@ -19,6 +19,8 @@ class CoreServiceProvider extends ServiceProvider
 	 */
 	public function boot(){
 		
+		compile_less();
+
 		DashboardMenu::addItem( new DashboardMenuItem('Resume','fa fa-tachometer', route('core::dashboard') ) );
 
 	}

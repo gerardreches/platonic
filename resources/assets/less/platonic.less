@@ -1,55 +1,34 @@
 
+@import "variables.less";
 @import "mixins.less";
+
+@import "reset.less";
 @import "colors.less";
-
-//--------------------------------------------------------------------------
-// PLATONIC MAIN VARIABLES
-//--------------------------------------------------------------------------
-
-@base_font_size = 16px;
-@base_font_family = "Varela Round";
-
-// Media query breakpoints
-@size_for_phablet = 32rem;
-@size_for_tablet = 48rem;
-@size_for_laptop = 64rem;
-@size_for_desktop = 80rem;
-
-// Media query conditions
-@phablet = ~"screen and (min-width: @{size_for_phablet})";
-@tablet = ~"screen and (min-width: @{size_for_tablet})";
-@laptop = ~"screen and (min-width: @{size_for_laptop})";
-@desktop = ~"screen and (min-width: @{size_for_desktop})";
+@import "sidemenu.less";
 
 //--------------------------------------------------------------------------
 // PLATONIC MAIN ELEMENTS
 //--------------------------------------------------------------------------
 
-*{
-	padding: 0;
-	margin: 0;
-	.box-sizing(border-box);
-}
-
 html{
 	font-size: @base_font_size;
 	font-family: @base_font_family, sans-serif;
+	font-style: normal;
+	font-weight: 300;
 	line-height: 1.5rem;
-	width: 100%;
-	height: 100%;
 }
 
 body{
-	background-color: white;
+	background-color: @white;
+}
+
+.fluid-container, .main-container{
+	
 	width: 100%;
 	height: 100%;
 }
 
 .main-container{
-	
-	width: 100%;
-	height: 100%;
-
 	@media @tablet{
 		width: 48rem;
 		margin: auto; 
@@ -62,17 +41,14 @@ body{
 	}
 }
 
-.fluid-container{
-	width: 100%;
-}
-
 .header{
 	width: 100%;
-	height: 3rem;
+	height: 3.5rem;
 	display: flex;
 	align-items: center;
 	vertical-align: middle;
 	color: white;
+	background-color: #27ae60;
 }
 
 .message-box{
@@ -100,53 +76,4 @@ p{
 a{
 	text-decoration: none;
 	color: black;
-}
-
-//--------------------------------------------------------------------------
-// PLATONIC SIDE MENU
-//--------------------------------------------------------------------------
-
-.side-menu{
-
-	width: 12rem;
-	max-width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	overflow-y: hidden;
-	background-color: black;
-
-	ul{
-		width: 100%;
-		height: 100%;
-		overflow-y: auto;
-		list-style: none;
-
-		li{
-			width: 100%;
-			min-height: 2.5rem;
-			display: flex;
-			align-items: center;
-			vertical-align: middle;
-			color: white;
-			background-color: black;
-
-			&:hover{
-				background-color: orange;
-				cursor: pointer;
-			}
-
-			a{
-				width: 100%;
-				height: 100%;
-				color: white;
-			}
-			i, span{
-				margin-left: 0.5rem;
-			}
-		}
-
-	}
-	
-
 }

@@ -5,12 +5,8 @@
 	@include('layouts.head')
 
 	<body>
-		
-		<div class="main-container">
 
-			@yield('content')
-
-		</div>
+		@yield('content')
 
 	</body>
 

@@ -2,23 +2,12 @@
 
 @section('content')
 
-<div class="side-menu">
+	@include('core::components.sidemenu')
 
-	<div class="header">
-		Platonic
+	<div class="fluid-container has-side-menu">
+
+		<div class="header">Menu</div>
+
 	</div>
-
-	<ul>
-		@foreach(DashboardMenu::getItems() as $item)
-			<li>
-				<a href="{{ $item->getRoute() }}">
-					<i class="{{ $item->getIcon() }}"></i>
-					<span>{{ $item->getTitle() }}</span>
-				</a>
-			</li>
-		@endforeach
-	</ul>
-
-</div>
 
 @endsection

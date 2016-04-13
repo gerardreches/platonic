@@ -6,18 +6,62 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.has-side-menu {
+  padding-left: 12rem;
+}
+.side-menu {
+  width: 12rem;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  overflow-y: hidden;
+  background-color: #141414;
+}
+.side-menu ul {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  list-style: none;
+}
+.side-menu ul li {
+  width: 100%;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  color: #ffffff;
+  background-color: #141414;
+}
+.side-menu ul li:hover {
+  background-color: #d35400;
+  cursor: pointer;
+}
+.side-menu ul li a {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+.side-menu ul li i,
+.side-menu ul li span {
+  padding-left: 0.5rem;
+}
 html {
   font-size: 16px;
   font-family: "Varela Round", sans-serif;
+  font-style: normal;
+  font-weight: 300;
   line-height: 1.5rem;
-  width: 100%;
-  height: 100%;
 }
 body {
-  background-color: white;
-  width: 100%;
-  height: 100%;
+  background-color: #ffffff;
 }
+.fluid-container,
 .main-container {
   width: 100%;
   height: 100%;
@@ -38,16 +82,14 @@ body {
     width: 80rem;
   }
 }
-.fluid-container {
-  width: 100%;
-}
 .header {
   width: 100%;
-  height: 3rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   vertical-align: middle;
   color: white;
+  background-color: #27ae60;
 }
 .message-box {
   width: 80%;
@@ -71,41 +113,4 @@ p {
 a {
   text-decoration: none;
   color: black;
-}
-.side-menu {
-  width: 12rem;
-  max-width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  overflow-y: hidden;
-  background-color: black;
-}
-.side-menu ul {
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  list-style: none;
-}
-.side-menu ul li {
-  width: 100%;
-  min-height: 2.5rem;
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-  color: white;
-  background-color: black;
-}
-.side-menu ul li:hover {
-  background-color: orange;
-  cursor: pointer;
-}
-.side-menu ul li a {
-  width: 100%;
-  height: 100%;
-  color: white;
-}
-.side-menu ul li i,
-.side-menu ul li span {
-  margin-left: 0.5rem;
 }
