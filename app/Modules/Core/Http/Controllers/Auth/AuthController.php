@@ -1,12 +1,12 @@
 <?php
 
-namespace Platonic\Http\Controllers\Auth;
+namespace Platonic\Modules\Core\Http\Controllers\Auth;
 
+use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Platonic\Modules\Core\Http\Controllers\Controller;
 use Platonic\User;
 use Validator;
-use Platonic\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {

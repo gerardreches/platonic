@@ -1,6 +1,6 @@
 <?php
 
-namespace Platonic\Http;
+namespace Platonic\Modules\Core\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 

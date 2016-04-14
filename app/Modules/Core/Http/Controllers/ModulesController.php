@@ -2,19 +2,21 @@
 
 namespace Platonic\Modules\Core\Http\Controllers;
 
+use Caffeinated\Modules\Facades\Module;
 use Illuminate\Http\Request;
+use Platonic\Modules\Core\Http\Controllers\Controller;
 
 class ModulesController extends Controller
 {
 	
 	public function index(){
 		$modules = Module::all();
-		return view('modules.index', compact('modules'));
+		return view('core::modules.index', compact('modules'));
 	}
 
 	public function show($slug){
 		$module = Module::getProperties($slug);
-		return view('modules.show', compact('module'));
+		return view('core::modules.show', compact('module'));
 	}
 
 	public function enable($slug){

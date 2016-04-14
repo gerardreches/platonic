@@ -1,6 +1,6 @@
 <?php
 
-namespace Platonic\Providers;
+namespace Platonic\Modules\Core\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;

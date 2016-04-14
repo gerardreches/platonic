@@ -1,9 +1,9 @@
 <?php
 
-namespace Platonic\Http\Controllers\Auth;
+namespace Platonic\Modules\Core\Http\Controllers\Auth;
 
-use Platonic\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Platonic\Modules\Core\Http\Controllers\Controller;
 
 class PasswordController extends Controller
 {

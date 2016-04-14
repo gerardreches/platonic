@@ -1,6 +1,6 @@
 <?php
 
-namespace Platonic\Providers;
+namespace Platonic\Modules\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

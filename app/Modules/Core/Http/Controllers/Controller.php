@@ -1,6 +1,6 @@
 <?php
 
-namespace Platonic\Http\Controllers;
+namespace Platonic\Modules\Core\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

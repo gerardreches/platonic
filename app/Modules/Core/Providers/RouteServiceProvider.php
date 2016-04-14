@@ -1,4 +1,5 @@
 <?php
+
 namespace Platonic\Modules\Core\Providers;
 
 use Caffeinated\Modules\Providers\RouteServiceProvider as ServiceProvider;
@@ -36,8 +37,7 @@ class RouteServiceProvider extends ServiceProvider
 	 */
 	public function map(Router $router)
 	{
-		$router->group(['namespace' => $this->namespace], function($router)
-		{
+		$router->group(['namespace' => $this->namespace], function($router) {
 			require (config('modules.path').'/Core/Http/routes.php');
 		});
 	}
