@@ -8,7 +8,6 @@ use Config;
 use Illuminate\Support\ServiceProvider;
 use Lang;
 use Platonic\Modules\Core\Components\Facades\DashboardMenu;
-use Platonic\Modules\Core\Components\Source\DashboardMenuItem;
 use View;
 
 class CoreServiceProvider extends ServiceProvider
@@ -21,7 +20,9 @@ class CoreServiceProvider extends ServiceProvider
 		
 		compile_less();
 
-		DashboardMenu::addItem( new DashboardMenuItem('Resume','fa fa-tachometer', route('core::dashboard') ) );
+		DashboardMenu::addItem( 'Resume', 'fa fa-tachometer', route('core::dashboard') );
+		DashboardMenu::addItem( 'Modules', 'fa fa-cube', route('core::modules') );
+		DashboardMenu::addItem( 'Settings', 'fa fa-cog', route('core::settings') );
 
 	}
 

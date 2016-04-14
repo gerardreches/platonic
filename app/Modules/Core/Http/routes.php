@@ -12,12 +12,21 @@
 */
 
 
-Route::group(['prefix' => 'core', 'as' => 'core::'], function() {
+Route::group(['prefix' => 'panel', 'as' => 'core::'], function() {
 
-	Route::get('/', ['as' => 'dashboard', function() {
-		return view('core::dashboard');
-	}]);
+	Route::get('/', [
+		'as' => 'dashboard', 
+		function() { return view('core::dashboard'); }
+	]);
 
-	Route::get('/users/{id}', 'UsersController@show');
+	Route::get('/modules', [
+		'as' => 'modules',
+		'uses' => 'ModulesController@index'
+	]);
+
+	Route::get('/settings', [
+		'as' => 'settings',
+		'uses' => 'OptionsController@index'
+	]);
 
 });

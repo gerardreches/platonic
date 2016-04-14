@@ -3,16 +3,26 @@ namespace Platonic\Modules\Blog\Providers;
 
 use App;
 use Config;
-use Lang;
-use View;
 use Illuminate\Support\ServiceProvider;
+use Lang;
+use Platonic\Modules\Core\Components\Facades\DashboardMenu;
+use View;
 
 class BlogServiceProvider extends ServiceProvider
 {
+
 	/**
-	 * Register the Blog module service provider.
-	 *
-	 * @return void
+	 * Add inside this function all the dashboard menu items for this module.
+	 */
+	public function boot(){
+		
+		DashboardMenu::addItem( 'Posts', 'fa fa-pencil', route('core::blog_posts') );
+		DashboardMenu::addItem( 'Comments', 'fa fa-comments', route('core::blog_comments') );
+
+	}
+
+	/**
+	 * Register module services in the IoC container.
 	 */
 	public function register()
 	{
