@@ -1,3 +1,18 @@
 
-@import "variables.less";
+@import "variables";
 
+//--------------------------------------------------------------------------
+// PLATONIC COLORS SYSTEM
+//--------------------------------------------------------------------------
+
+.generate-color-system(@color_list_length);
+
+.generate-color-system(@number, @i: 1) when (@i =< @number) {
+	@name: extract(@color_list, @i);
+
+	.bg-@{name} {
+		background-color: @@name;
+	}
+	
+	.generate-color-system(@number, (@i + 1));
+}

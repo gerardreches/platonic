@@ -1,10 +1,11 @@
 
-@import "variables.less";
-@import "mixins.less";
+@import "variables";
+@import "mixins";
 
-@import "reset.less";
-@import "colors.less";
-@import "sidemenu.less";
+@import "reset";
+@import "colors";
+@import "grid";
+@import "sidemenu";
 
 //--------------------------------------------------------------------------
 // PLATONIC MAIN ELEMENTS
@@ -16,29 +17,41 @@ html{
 	font-style: normal;
 	font-weight: 300;
 	line-height: 1.5rem;
+	text-rendering: optimizeLegibility;
 }
 
 body{
 	background-color: @white;
 }
 
-.fluid-container, .main-container{
-	
-	width: 100%;
+.main-fluid-container, .main-container{
 	height: 100%;
 }
 
-.main-container{
+.main-fluid-container, .main-container, .fluid-container, .container, .page, .fluid-page{
+	width: 100%;
+}
+
+.main-container, .container, .page{
 	@media @tablet{
-		width: 48rem;
+		max-width: 48rem;
 		margin: auto; 
 	}
 	@media @laptop{
-		width: 64rem;
+		max-width: 64rem;
 	}
 	@media @desktop{
-		width: 80rem;
+		max-width: 80rem;
 	}
+}
+
+.page, .fluid-page{
+	padding: 3rem;
+}
+
+.gap{
+	width: 100%;
+	height: 2rem;
 }
 
 .header{
@@ -49,6 +62,40 @@ body{
 	vertical-align: middle;
 	color: white;
 	background-color: #27ae60;
+	padding: 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: bold;
+	line-height: 1.5em;
+	@media @tablet{
+		line-height: 1.6em;
+	}
+	@media @laptop{
+		line-height: 1.7em;
+	}
+	@media @desktop{
+		line-height: 1.8em;
+	}
+}
+h1{
+	font-size: 3rem;
+	margin: 0;
+}
+h2{
+	font-size: 2.6rem;
+}
+h3{
+	font-size: 2.2rem;
+}
+h4{
+	font-size: 1.8rem;
+}
+h5{
+	font-size: 1.4rem;
+}
+h6{
+	font-size: 1rem;
 }
 
 .message-box{
@@ -69,11 +116,20 @@ body{
 	}
 }
 
-p{
-	margin-bottom: 1.2rem;
+.panel{
+	div:first-child{
+
+	}
 }
 
-a{
-	text-decoration: none;
-	color: black;
+p{
+	margin-bottom: 1.5rem;
+}
+
+i, em{
+	font-style: italic;
+}
+
+b, strong{
+	font-weight: bold;
 }

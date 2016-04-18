@@ -9,3 +9,21 @@
   -webkit-box-sizing: @sizing;
   box-sizing: @sizing;
 }
+
+.rotate(@rotation: 45deg){
+	-ms-transform: rotate(@rotation);
+    -webkit-transform: rotate(@rotation);
+    transform: rotate(@rotation);
+}
+
+.translate(@translateX: 0%, @translateY: 0%){
+	-ms-transform: translate(@translateX, @translateY);
+    -webkit-transform: translate(@translateX, @translateY);
+    transform: translate(@translateX, @translateY);
+}
+
+.translate_and_rotate(@translateX: 0%, @translateY: 0%, @rotation: 45deg){
+	-ms-transform: translate(@translateX, @translateY) rotate(@rotation);
+    -webkit-transform: translate(@translateX, @translateY) rotate(@rotation);
+    transform: translate(@translateX, @translateY) rotate(@rotation);
+}

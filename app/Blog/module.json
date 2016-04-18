@@ -1,0 +1,10 @@
+{
+	"name": "Blog",
+	"author": "Gerard Reches",
+	"slug": "blog",
+	"namespace": "Blog",
+	"version": "1.0",
+	"description": "Blog module for Platonic CMS. Includes SEO options for your contents.",
+	"enabled": true,
+	"order": 2
+}
