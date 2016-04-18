@@ -18,7 +18,9 @@ class CoreServiceProvider extends ServiceProvider
 	 */
 	public function boot(){
 		
-		compile_less();
+		if ($this->app->environment() == 'local') {
+            compile_less(false);
+        }
 
 		DashboardMenu::addItem( 'Resume', 'fa fa-tachometer', route('core::dashboard') );
 		DashboardMenu::addItem( 'Modules', 'fa fa-cube', route('core::modules') );

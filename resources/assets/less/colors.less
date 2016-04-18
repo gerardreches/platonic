@@ -5,14 +5,21 @@
 // PLATONIC COLORS SYSTEM
 //--------------------------------------------------------------------------
 
-.generate-color-system(@color_list_length);
+.generate-color-system(@color-list-length);
 
 .generate-color-system(@number, @i: 1) when (@i =< @number) {
-	@name: extract(@color_list, @i);
-
-	.bg-@{name} {
-		background-color: @@name;
+	@name: extract(@color-list, @i);
+	
+	.@{name}-text-color { color: @@name; }
+	.@{name}-border-color {border-color: @@name !important;}
+	.@{name}-background { background-color: @@name; }
+	.@{name}-ribbed-background {
+		background: @@name linear-gradient(-45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+		background-size: 40px 40px;
 	}
+	.@{name}-background-on-hover {&:hover{background: @@name;}}
+	.@{name}-background-on-hover {&:hover{background: @@name;}}
+	
 	
 	.generate-color-system(@number, (@i + 1));
 }
