@@ -35,8 +35,11 @@ class CoreServiceProvider extends ServiceProvider
 	{
 		App::register('Platonic\Core\Providers\RouteServiceProvider');
 		App::register('Platonic\Core\Providers\HelperServiceProvider');
-		App::register('Platonic\Core\Providers\FactoryServiceProvider');
 		App::register('Platonic\Core\Providers\FacadeServiceProvider');
+		
+		if ($this->app->environment() == 'local') {
+            App::register('Platonic\Core\Providers\FactoryServiceProvider');
+        }
 
 		$this->registerNamespaces();
 	}
