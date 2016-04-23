@@ -1,10 +1,9 @@
 {
 	"name": "Core",
-	"author": "Gerard Reches",
 	"slug": "core",
 	"namespace": "Core",
 	"version": "1.0",
-	"description": "This is Platonic core module.",
-	"enabled": true,
-	"order": 1
+	"author": "Gerard Reches",
+	"license": "MIT",
+	"description": "This is Platonic core module."
 }

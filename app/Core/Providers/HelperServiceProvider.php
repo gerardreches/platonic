@@ -15,7 +15,7 @@ class HelperServiceProvider extends ServiceProvider
         //  Helpers folders.
 
         foreach (Module::enabled() as $module) {
-            $this->registerHelpers( $module->get('name') );
+            $this->registerHelpers( $module['name'] );
         }
     }
 

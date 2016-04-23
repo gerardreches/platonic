@@ -21,10 +21,12 @@ class ModulesController extends Controller
 
 	public function enable($slug){
 		Module::enable($slug);
+		return redirect()->route('core::modules');
 	}
 
 	public function disable($slug){
 		Module::disable($slug);
+		return redirect()->route('core::modules');
 	}
 
 }

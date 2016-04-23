@@ -1,6 +1,6 @@
 <?php
 
-namespace Platonic\Exceptions;
+namespace Platonic\Core\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;

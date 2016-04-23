@@ -1,6 +1,6 @@
 <?php
 
-namespace Platonic\Console\Commands;
+namespace Platonic\Core\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

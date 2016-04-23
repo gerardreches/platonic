@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'Europe/Madrid',
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale' => 'es',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -151,7 +151,6 @@ return [
         /*
          * Application Service Providers...
          */
-        
 
         /*
          * Extra Packages Service Providers...
@@ -204,6 +203,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Module' => Caffeinated\Modules\Facades\Module::class,
+
     ],
 
 ];

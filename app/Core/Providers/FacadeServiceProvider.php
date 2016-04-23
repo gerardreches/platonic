@@ -26,7 +26,7 @@ class FacadeServiceProvider extends ServiceProvider
 		//	must have the same name in order to work.
 
 		foreach (Module::enabled() as $module) {
-			$this->registerFacades( $module->get('name') );
+			$this->registerFacades( $module['name'] );
 		}
 		
 	}

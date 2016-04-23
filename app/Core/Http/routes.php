@@ -11,20 +11,28 @@
 |
 */
 
-
-Route::group(['prefix' => 'panel', 'as' => 'core::'], function() {
+Route::group(['prefix' => 'dashboard', 'as' => 'core::'], function() {
 
 	Route::get('/', [
 		'as' => 'dashboard', 
 		function() { return view('core::layouts.dashboard'); }
 	]);
 
-	Route::get('/modules', [
+	Route::get('modules', [
 		'as' => 'modules',
 		'uses' => 'ModulesController@index'
 	]);
+	Route::get('modules/{slug}/enable', [
+		'as' => 'enable',
+		'uses' => 'ModulesController@enable'
+	]);
+	Route::get('modules/{slug}/disable', [
+		'as' => 'disable',
+		'uses' => 'ModulesController@disable'
+	]);
+	
 
-	Route::get('/settings', [
+	Route::get('settings', [
 		'as' => 'settings',
 		'uses' => 'OptionsController@index'
 	]);

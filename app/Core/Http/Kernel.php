@@ -16,7 +16,7 @@ class Kernel extends HttpKernel
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
     ];
-
+    
     /**
      * The application's route middleware groups.
      *
@@ -46,6 +46,7 @@ class Kernel extends HttpKernel
     protected $routeMiddleware = [
         'auth' => \Platonic\Core\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'guest' => \Platonic\Core\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
 

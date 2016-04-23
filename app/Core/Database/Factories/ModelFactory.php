@@ -11,9 +11,9 @@
 |
 */
 
-foreach(Module::enabled() as $active_module){
+foreach(Module::enabled() as $module){
 
-	if($active_module->get('name') === 'Core'){
+	if($module['name'] === 'Core'){
 
 		//--------------------------------------------------------------------------
 		// Core factories already loaded in FactoryServiceProvider.
@@ -21,7 +21,7 @@ foreach(Module::enabled() as $active_module){
 
 	}else{
 
-		$factory->load( config('modules.path') . '\\' . $active_module->get('name') . '\\Database\\Factories' );
+		$factory->load( config('modules.path') . '\\' . $module['name'] . '\\Database\\Factories' );
 	}
 
 }

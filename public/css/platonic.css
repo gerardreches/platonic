@@ -11,436 +11,642 @@ body {
   width: 100%;
   height: 100%;
 }
+body {
+  background-color: #ffffff;
+}
 a {
   text-decoration: none;
 }
+html {
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5rem;
+  text-rendering: optimizeLegibility;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5em;
+}
+@media screen and (min-width: 48rem) {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.6em;
+  }
+}
+@media screen and (min-width: 64rem) {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.7em;
+  }
+}
+@media screen and (min-width: 80rem) {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.8em;
+  }
+}
+p {
+  margin-bottom: 1.5rem;
+}
+i,
+em {
+  font-style: italic;
+}
+b,
+strong {
+  font-weight: bold;
+}
+small {
+  font-size: 0.8em;
+}
+mark {
+  background-color: #f1c40f;
+  padding: 0.2rem;
+}
+ins {
+  text-decoration: underline;
+}
+del {
+  text-decoration: line-through;
+}
+sub {
+  vertical-align: sub;
+  font-size: 0.8em;
+}
+sup {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+h2 {
+  font-size: 2.6rem;
+}
+h3 {
+  font-size: 2.2rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+h5 {
+  font-size: 1.4rem;
+}
+h6 {
+  font-size: 1rem;
+}
+.bold-text {
+  font-weight: bold;
+}
+.italic-text {
+  font-style: italic;
+}
+.marked-text {
+  background-color: #f1c40f;
+  padding: 0.2rem;
+}
+.inserted-text {
+  text-decoration: underline;
+}
+.deleted-text {
+  text-decoration: line-through;
+}
+.subscripted-text {
+  vertical-align: sub;
+  font-size: 0.8em;
+}
+.superscripted-text {
+  vertical-align: super;
+  font-size: 0.8em;
+}
 .black-text-color {
-  color: #141414;
+  color: #141414 !important;
 }
 .black-border-color {
   border-color: #141414 !important;
 }
 .black-background {
-  background-color: #141414;
+  background-color: #141414 !important;
+}
+.soft-black-background {
+  background-color: rgba(20, 20, 20, 0.25) !important;
 }
 .black-ribbed-background {
-  background: #141414 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #141414 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .black-background-on-hover:hover {
-  background: #141414;
+  background: #141414 !important;
 }
 .black-background-on-hover:hover {
-  background: #141414;
+  background: #141414 !important;
 }
 .white-text-color {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 .white-border-color {
   border-color: #ffffff !important;
 }
 .white-background {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
+}
+.soft-white-background {
+  background-color: rgba(255, 255, 255, 0.25) !important;
 }
 .white-ribbed-background {
-  background: #ffffff linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #ffffff linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .white-background-on-hover:hover {
-  background: #ffffff;
+  background: #ffffff !important;
 }
 .white-background-on-hover:hover {
-  background: #ffffff;
+  background: #ffffff !important;
 }
 .turquoise-text-color {
-  color: #1abc9c;
+  color: #1abc9c !important;
 }
 .turquoise-border-color {
   border-color: #1abc9c !important;
 }
 .turquoise-background {
-  background-color: #1abc9c;
+  background-color: #1abc9c !important;
+}
+.soft-turquoise-background {
+  background-color: rgba(26, 188, 156, 0.25) !important;
 }
 .turquoise-ribbed-background {
-  background: #1abc9c linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #1abc9c linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .turquoise-background-on-hover:hover {
-  background: #1abc9c;
+  background: #1abc9c !important;
 }
 .turquoise-background-on-hover:hover {
-  background: #1abc9c;
+  background: #1abc9c !important;
 }
 .green-sea-text-color {
-  color: #16a085;
+  color: #16a085 !important;
 }
 .green-sea-border-color {
   border-color: #16a085 !important;
 }
 .green-sea-background {
-  background-color: #16a085;
+  background-color: #16a085 !important;
+}
+.soft-green-sea-background {
+  background-color: rgba(22, 160, 133, 0.25) !important;
 }
 .green-sea-ribbed-background {
-  background: #16a085 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #16a085 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .green-sea-background-on-hover:hover {
-  background: #16a085;
+  background: #16a085 !important;
 }
 .green-sea-background-on-hover:hover {
-  background: #16a085;
+  background: #16a085 !important;
 }
 .emerald-text-color {
-  color: #2ecc71;
+  color: #2ecc71 !important;
 }
 .emerald-border-color {
   border-color: #2ecc71 !important;
 }
 .emerald-background {
-  background-color: #2ecc71;
+  background-color: #2ecc71 !important;
+}
+.soft-emerald-background {
+  background-color: rgba(46, 204, 113, 0.25) !important;
 }
 .emerald-ribbed-background {
-  background: #2ecc71 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #2ecc71 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .emerald-background-on-hover:hover {
-  background: #2ecc71;
+  background: #2ecc71 !important;
 }
 .emerald-background-on-hover:hover {
-  background: #2ecc71;
+  background: #2ecc71 !important;
 }
 .nephritis-text-color {
-  color: #27ae60;
+  color: #27ae60 !important;
 }
 .nephritis-border-color {
   border-color: #27ae60 !important;
 }
 .nephritis-background {
-  background-color: #27ae60;
+  background-color: #27ae60 !important;
+}
+.soft-nephritis-background {
+  background-color: rgba(39, 174, 96, 0.25) !important;
 }
 .nephritis-ribbed-background {
-  background: #27ae60 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #27ae60 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .nephritis-background-on-hover:hover {
-  background: #27ae60;
+  background: #27ae60 !important;
 }
 .nephritis-background-on-hover:hover {
-  background: #27ae60;
+  background: #27ae60 !important;
 }
 .peter-river-text-color {
-  color: #3498db;
+  color: #3498db !important;
 }
 .peter-river-border-color {
   border-color: #3498db !important;
 }
 .peter-river-background {
-  background-color: #3498db;
+  background-color: #3498db !important;
+}
+.soft-peter-river-background {
+  background-color: rgba(52, 152, 219, 0.25) !important;
 }
 .peter-river-ribbed-background {
-  background: #3498db linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #3498db linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .peter-river-background-on-hover:hover {
-  background: #3498db;
+  background: #3498db !important;
 }
 .peter-river-background-on-hover:hover {
-  background: #3498db;
+  background: #3498db !important;
 }
 .belize-hole-text-color {
-  color: #2980b9;
+  color: #2980b9 !important;
 }
 .belize-hole-border-color {
   border-color: #2980b9 !important;
 }
 .belize-hole-background {
-  background-color: #2980b9;
+  background-color: #2980b9 !important;
+}
+.soft-belize-hole-background {
+  background-color: rgba(41, 128, 185, 0.25) !important;
 }
 .belize-hole-ribbed-background {
-  background: #2980b9 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #2980b9 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .belize-hole-background-on-hover:hover {
-  background: #2980b9;
+  background: #2980b9 !important;
 }
 .belize-hole-background-on-hover:hover {
-  background: #2980b9;
+  background: #2980b9 !important;
 }
 .amethyst-text-color {
-  color: #9b59b6;
+  color: #9b59b6 !important;
 }
 .amethyst-border-color {
   border-color: #9b59b6 !important;
 }
 .amethyst-background {
-  background-color: #9b59b6;
+  background-color: #9b59b6 !important;
+}
+.soft-amethyst-background {
+  background-color: rgba(155, 89, 182, 0.25) !important;
 }
 .amethyst-ribbed-background {
-  background: #9b59b6 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #9b59b6 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .amethyst-background-on-hover:hover {
-  background: #9b59b6;
+  background: #9b59b6 !important;
 }
 .amethyst-background-on-hover:hover {
-  background: #9b59b6;
+  background: #9b59b6 !important;
 }
 .wisteria-text-color {
-  color: #8e44ad;
+  color: #8e44ad !important;
 }
 .wisteria-border-color {
   border-color: #8e44ad !important;
 }
 .wisteria-background {
-  background-color: #8e44ad;
+  background-color: #8e44ad !important;
+}
+.soft-wisteria-background {
+  background-color: rgba(142, 68, 173, 0.25) !important;
 }
 .wisteria-ribbed-background {
-  background: #8e44ad linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #8e44ad linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .wisteria-background-on-hover:hover {
-  background: #8e44ad;
+  background: #8e44ad !important;
 }
 .wisteria-background-on-hover:hover {
-  background: #8e44ad;
+  background: #8e44ad !important;
 }
 .wet-asphalt-text-color {
-  color: #34495e;
+  color: #34495e !important;
 }
 .wet-asphalt-border-color {
   border-color: #34495e !important;
 }
 .wet-asphalt-background {
-  background-color: #34495e;
+  background-color: #34495e !important;
+}
+.soft-wet-asphalt-background {
+  background-color: rgba(52, 73, 94, 0.25) !important;
 }
 .wet-asphalt-ribbed-background {
-  background: #34495e linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #34495e linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .wet-asphalt-background-on-hover:hover {
-  background: #34495e;
+  background: #34495e !important;
 }
 .wet-asphalt-background-on-hover:hover {
-  background: #34495e;
+  background: #34495e !important;
 }
 .midnight-blue-text-color {
-  color: #2c3e50;
+  color: #2c3e50 !important;
 }
 .midnight-blue-border-color {
   border-color: #2c3e50 !important;
 }
 .midnight-blue-background {
-  background-color: #2c3e50;
+  background-color: #2c3e50 !important;
+}
+.soft-midnight-blue-background {
+  background-color: rgba(44, 62, 80, 0.25) !important;
 }
 .midnight-blue-ribbed-background {
-  background: #2c3e50 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #2c3e50 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .midnight-blue-background-on-hover:hover {
-  background: #2c3e50;
+  background: #2c3e50 !important;
 }
 .midnight-blue-background-on-hover:hover {
-  background: #2c3e50;
+  background: #2c3e50 !important;
 }
 .sun-flower-text-color {
-  color: #f1c40f;
+  color: #f1c40f !important;
 }
 .sun-flower-border-color {
   border-color: #f1c40f !important;
 }
 .sun-flower-background {
-  background-color: #f1c40f;
+  background-color: #f1c40f !important;
+}
+.soft-sun-flower-background {
+  background-color: rgba(241, 196, 15, 0.25) !important;
 }
 .sun-flower-ribbed-background {
-  background: #f1c40f linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #f1c40f linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .sun-flower-background-on-hover:hover {
-  background: #f1c40f;
+  background: #f1c40f !important;
 }
 .sun-flower-background-on-hover:hover {
-  background: #f1c40f;
+  background: #f1c40f !important;
 }
 .orange-text-color {
-  color: #f39c12;
+  color: #f39c12 !important;
 }
 .orange-border-color {
   border-color: #f39c12 !important;
 }
 .orange-background {
-  background-color: #f39c12;
+  background-color: #f39c12 !important;
+}
+.soft-orange-background {
+  background-color: rgba(243, 156, 18, 0.25) !important;
 }
 .orange-ribbed-background {
-  background: #f39c12 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #f39c12 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .orange-background-on-hover:hover {
-  background: #f39c12;
+  background: #f39c12 !important;
 }
 .orange-background-on-hover:hover {
-  background: #f39c12;
+  background: #f39c12 !important;
 }
 .carrot-text-color {
-  color: #e67e22;
+  color: #e67e22 !important;
 }
 .carrot-border-color {
   border-color: #e67e22 !important;
 }
 .carrot-background {
-  background-color: #e67e22;
+  background-color: #e67e22 !important;
+}
+.soft-carrot-background {
+  background-color: rgba(230, 126, 34, 0.25) !important;
 }
 .carrot-ribbed-background {
-  background: #e67e22 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #e67e22 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .carrot-background-on-hover:hover {
-  background: #e67e22;
+  background: #e67e22 !important;
 }
 .carrot-background-on-hover:hover {
-  background: #e67e22;
+  background: #e67e22 !important;
 }
 .pumpkin-text-color {
-  color: #d35400;
+  color: #d35400 !important;
 }
 .pumpkin-border-color {
   border-color: #d35400 !important;
 }
 .pumpkin-background {
-  background-color: #d35400;
+  background-color: #d35400 !important;
+}
+.soft-pumpkin-background {
+  background-color: rgba(211, 84, 0, 0.25) !important;
 }
 .pumpkin-ribbed-background {
-  background: #d35400 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #d35400 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .pumpkin-background-on-hover:hover {
-  background: #d35400;
+  background: #d35400 !important;
 }
 .pumpkin-background-on-hover:hover {
-  background: #d35400;
+  background: #d35400 !important;
 }
 .alizarin-text-color {
-  color: #e74c3c;
+  color: #e74c3c !important;
 }
 .alizarin-border-color {
   border-color: #e74c3c !important;
 }
 .alizarin-background {
-  background-color: #e74c3c;
+  background-color: #e74c3c !important;
+}
+.soft-alizarin-background {
+  background-color: rgba(231, 76, 60, 0.25) !important;
 }
 .alizarin-ribbed-background {
-  background: #e74c3c linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #e74c3c linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .alizarin-background-on-hover:hover {
-  background: #e74c3c;
+  background: #e74c3c !important;
 }
 .alizarin-background-on-hover:hover {
-  background: #e74c3c;
+  background: #e74c3c !important;
 }
 .pomegranate-text-color {
-  color: #c0392b;
+  color: #c0392b !important;
 }
 .pomegranate-border-color {
   border-color: #c0392b !important;
 }
 .pomegranate-background {
-  background-color: #c0392b;
+  background-color: #c0392b !important;
+}
+.soft-pomegranate-background {
+  background-color: rgba(192, 57, 43, 0.25) !important;
 }
 .pomegranate-ribbed-background {
-  background: #c0392b linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #c0392b linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .pomegranate-background-on-hover:hover {
-  background: #c0392b;
+  background: #c0392b !important;
 }
 .pomegranate-background-on-hover:hover {
-  background: #c0392b;
+  background: #c0392b !important;
 }
 .clouds-text-color {
-  color: #ecf0f1;
+  color: #ecf0f1 !important;
 }
 .clouds-border-color {
   border-color: #ecf0f1 !important;
 }
 .clouds-background {
-  background-color: #ecf0f1;
+  background-color: #ecf0f1 !important;
+}
+.soft-clouds-background {
+  background-color: rgba(236, 240, 241, 0.25) !important;
 }
 .clouds-ribbed-background {
-  background: #ecf0f1 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #ecf0f1 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .clouds-background-on-hover:hover {
-  background: #ecf0f1;
+  background: #ecf0f1 !important;
 }
 .clouds-background-on-hover:hover {
-  background: #ecf0f1;
+  background: #ecf0f1 !important;
 }
 .silver-text-color {
-  color: #bdc3c7;
+  color: #bdc3c7 !important;
 }
 .silver-border-color {
   border-color: #bdc3c7 !important;
 }
 .silver-background {
-  background-color: #bdc3c7;
+  background-color: #bdc3c7 !important;
+}
+.soft-silver-background {
+  background-color: rgba(189, 195, 199, 0.25) !important;
 }
 .silver-ribbed-background {
-  background: #bdc3c7 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #bdc3c7 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .silver-background-on-hover:hover {
-  background: #bdc3c7;
+  background: #bdc3c7 !important;
 }
 .silver-background-on-hover:hover {
-  background: #bdc3c7;
+  background: #bdc3c7 !important;
 }
 .concrete-text-color {
-  color: #95a5a6;
+  color: #95a5a6 !important;
 }
 .concrete-border-color {
   border-color: #95a5a6 !important;
 }
 .concrete-background {
-  background-color: #95a5a6;
+  background-color: #95a5a6 !important;
+}
+.soft-concrete-background {
+  background-color: rgba(149, 165, 166, 0.25) !important;
 }
 .concrete-ribbed-background {
-  background: #95a5a6 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #95a5a6 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .concrete-background-on-hover:hover {
-  background: #95a5a6;
+  background: #95a5a6 !important;
 }
 .concrete-background-on-hover:hover {
-  background: #95a5a6;
+  background: #95a5a6 !important;
 }
 .asbestos-text-color {
-  color: #7f8c8d;
+  color: #7f8c8d !important;
 }
 .asbestos-border-color {
   border-color: #7f8c8d !important;
 }
 .asbestos-background {
-  background-color: #7f8c8d;
+  background-color: #7f8c8d !important;
+}
+.soft-asbestos-background {
+  background-color: rgba(127, 140, 141, 0.25) !important;
 }
 .asbestos-ribbed-background {
-  background: #7f8c8d linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background: #7f8c8d linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 40px 40px !important;
 }
 .asbestos-background-on-hover:hover {
-  background: #7f8c8d;
+  background: #7f8c8d !important;
 }
 .asbestos-background-on-hover:hover {
-  background: #7f8c8d;
+  background: #7f8c8d !important;
 }
-.grid {
-  display: -webkit-flex;
+.grid,
+.fluid-grid {
   display: flex;
+  display: -webkit-flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   -webkit-align-items: flex-start;
   align-items: flex-start;
+  width: 100%;
+}
+.grid {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 @media screen and (min-width: 32rem) {
   .grid {
@@ -463,15 +669,8 @@ a {
   }
 }
 .fluid-grid {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
-  width: 100%;
 }
 .full-width {
   width: 100%;
@@ -509,21 +708,92 @@ a {
 .five-sixth-width {
   width: 83.33333333%;
 }
-.has-side-menu {
-  padding-left: 12rem;
+.table,
+.bordered-table,
+.striped-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.table > thead > tr > th {
+  border-bottom: 2px solid #bdc3c7;
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+.table > tbody > tr > td {
+  border-top: 1px solid #bdc3c7;
+  padding: 0.5rem;
+}
+.bordered-table > thead > tr > th {
+  border: 1px solid #bdc3c7;
+  border-bottom: 2px solid #bdc3c7;
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+.bordered-table > tbody > tr > td {
+  border: 1px solid #bdc3c7;
+  padding: 0.5rem;
+}
+.striped-table > thead > tr > th {
+  border-bottom: 2px solid #bdc3c7;
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+.striped-table > tbody > tr > td {
+  border-top: 1px solid #bdc3c7;
+  padding: 0.5rem;
+}
+.striped-table > tbody > tr:nth-of-type(even) {
+  background-color: #ecf0f1;
+}
+.header {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #e74c3c;
+}
+.header > .header-item {
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.header > .header-item > * {
+  margin-right: 1rem;
+}
+.header > .header-item > *:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 48rem) {
+  .has-side-menu {
+    padding-left: 12rem;
+  }
 }
 .side-menu {
-  width: 12rem;
+  width: 100%;
   max-width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
+  height: auto;
   overflow: hidden;
-  background-color: #141414;
+  background-color: #34495e;
+  color: #ffffff;
 }
 .side-menu ul {
   width: 100%;
-  overflow: hidden;
   list-style: none;
 }
 .side-menu ul li {
@@ -531,11 +801,10 @@ a {
   min-height: 2.5rem;
   height: auto;
   position: relative;
-  color: #ffffff;
-  background-color: #141414;
+  color: inherit;
 }
 .side-menu ul li:hover {
-  background-color: #d35400;
+  background-color: #2c3e50;
   cursor: pointer;
 }
 .side-menu ul li.active::before {
@@ -552,27 +821,48 @@ a {
 }
 .side-menu ul li a {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: auto;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
   display: flex;
+  display: -webkit-flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
   align-items: center;
-  vertical-align: middle;
-  color: #ffffff;
+  -webkit-align-content: center;
+  align-content: center;
+  color: inherit;
 }
-.side-menu ul li i,
-.side-menu ul li span {
-  padding-left: 1rem;
+.side-menu ul li a > * {
+  padding-right: 1rem;
+  max-width: 100%;
+  word-wrap: break-word;
 }
-html {
-  font-size: 16px;
-  font-family: "Varela Round", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 1.5rem;
-  text-rendering: optimizeLegibility;
-}
-body {
-  background-color: #ffffff;
+@media screen and (min-width: 48rem) {
+  .side-menu {
+    width: 12rem;
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+  .side-menu ul li {
+    position: relative;
+  }
+  .side-menu ul li.active::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -0.5rem;
+    height: 1rem;
+    width: 1rem;
+    -ms-transform: translate(0%, -50%) rotate(45deg);
+    -webkit-transform: translate(0%, -50%) rotate(45deg);
+    transform: translate(0%, -50%) rotate(45deg);
+    background-color: #ffffff;
+  }
 }
 .main-fluid-container,
 .main-container {
@@ -616,73 +906,11 @@ body {
   width: 100%;
   height: 2rem;
 }
-.header {
-  width: 100%;
-  height: 3.5rem;
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-  color: white;
-  background-color: #27ae60;
-  padding: 0 1rem;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-  line-height: 1.5em;
-}
-@media screen and (min-width: 48rem) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: 1.6em;
-  }
-}
-@media screen and (min-width: 64rem) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: 1.7em;
-  }
-}
-@media screen and (min-width: 80rem) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: 1.8em;
-  }
-}
-h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-h2 {
-  font-size: 2.6rem;
-}
-h3 {
-  font-size: 2.2rem;
-}
-h4 {
-  font-size: 1.8rem;
-}
-h5 {
-  font-size: 1.4rem;
-}
-h6 {
-  font-size: 1rem;
+img {
+  max-height: 100%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 .message-box {
   width: 80%;
@@ -699,15 +927,4 @@ h6 {
 }
 .message-box p {
   text-align: center;
-}
-p {
-  margin-bottom: 1.5rem;
-}
-i,
-em {
-  font-style: italic;
-}
-b,
-strong {
-  font-weight: bold;
 }
