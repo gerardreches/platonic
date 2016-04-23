@@ -3,6 +3,12 @@
 // MIXINS
 //--------------------------------------------------------------------------
 
+.border-radius(@radius: 0%){
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
 .box-sizing(@sizing: border-box) {
   -ms-box-sizing: @sizing;
   -moz-box-sizing: @sizing;
@@ -10,20 +16,53 @@
   box-sizing: @sizing;
 }
 
+.opacity(@opacity: 1){
+  @alpha-opacity: @opacity*100;
+  filter:alpha(opacity=@alpha-opacity);
+  -moz-opacity: @opacity;
+  -khtml-opacity: @opacity;
+  opacity: @opacity;
+}
+
+.display-flex(){
+  display: flex;
+  display: -webkit-flex;
+}
+
+.flex-flow(@direction: row, @wrap: wrap){
+  -webkit-flex-flow: @direction @wrap;
+  flex-flow: @direction @wrap;
+}
+
+.align-items(@align: flex-start){
+  -webkit-align-items: @align;
+  align-items: @align;
+}
+
+.align-content(@align: flex-start){
+  -webkit-align-content: @align;
+  align-content: @align;
+}
+
+.justify-content(@justify: flex-start){
+  -webkit-justify-content: @justify;
+  justify-content: @justify;
+}
+
 .rotate(@rotation: 45deg){
 	-ms-transform: rotate(@rotation);
-    -webkit-transform: rotate(@rotation);
-    transform: rotate(@rotation);
+  -webkit-transform: rotate(@rotation);
+  transform: rotate(@rotation);
 }
 
 .translate(@translateX: 0%, @translateY: 0%){
 	-ms-transform: translate(@translateX, @translateY);
-    -webkit-transform: translate(@translateX, @translateY);
-    transform: translate(@translateX, @translateY);
+  -webkit-transform: translate(@translateX, @translateY);
+  transform: translate(@translateX, @translateY);
 }
 
 .translate-and-rotate(@translateX: 0%, @translateY: 0%, @rotation: 45deg){
 	-ms-transform: translate(@translateX, @translateY) rotate(@rotation);
-    -webkit-transform: translate(@translateX, @translateY) rotate(@rotation);
-    transform: translate(@translateX, @translateY) rotate(@rotation);
+  -webkit-transform: translate(@translateX, @translateY) rotate(@rotation);
+  transform: translate(@translateX, @translateY) rotate(@rotation);
 }

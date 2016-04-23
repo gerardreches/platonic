@@ -3,18 +3,18 @@
 @import "mixins";
 
 //--------------------------------------------------------------------------
-// PLATONIC GRID SYSTEM
+// PLATONIC GRIDS SYSTEM
 //--------------------------------------------------------------------------
 
+.grid, .fluid-grid{
+	.display-flex();
+	.flex-flow(row, wrap);
+	.align-items(flex-start);
+	width: 100%;
+}
+
 .grid{
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
-	-webkit-align-items: flex-start;
-	align-items: flex-start;
+	.justify-content(space-between);
 	@media @phablet{
 		width: @size-for-phablet;
 	}
@@ -30,15 +30,7 @@
 }
 
 .fluid-grid{
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-justify-content: space-around;
-	justify-content: space-around;
-	-webkit-align-items: flex-start;
-	align-items: flex-start;
-	width: 100%;
+	.justify-content(space-around);
 }
 
 .full-width{

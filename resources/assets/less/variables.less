@@ -1,22 +1,29 @@
 
 //--------------------------------------------------------------------------
-// PLATONIC MAIN VARIABLES
+// PLATONIC TYPOGRAPHY VARIABLES
 //--------------------------------------------------------------------------
 
 @base-font-size: 16px;
 @base-font-family: "Varela Round";
 
-// Media query breakpoints
+
+//--------------------------------------------------------------------------
+// PLATONIC MEDIA QUERY VARIABLES
+//--------------------------------------------------------------------------
+
+// Breakpoints
 @size-for-phablet: 32rem;
 @size-for-tablet: 48rem;
 @size-for-laptop: 64rem;
 @size-for-desktop: 80rem;
 
-// Media query conditions
+// Queries
 @phablet: ~"screen and (min-width: @{size-for-phablet})";
 @tablet: ~"screen and (min-width: @{size-for-tablet})";
 @laptop: ~"screen and (min-width: @{size-for-laptop})";
 @desktop: ~"screen and (min-width: @{size-for-desktop})";
+
+@queries-list: phablet, tablet, laptop, desktop;
 
 
 //--------------------------------------------------------------------------
@@ -54,5 +61,3 @@
 @asbestos: #7f8c8d;
 
 @color-list: ~'black', ~'white', ~'turquoise', ~'green-sea', ~'emerald', ~'nephritis', ~'peter-river', ~'belize-hole', ~'amethyst', ~'wisteria', ~'wet-asphalt', ~'midnight-blue', ~'sun-flower', ~'orange', ~'carrot', ~'pumpkin', ~'alizarin', ~'pomegranate', ~'clouds', ~'silver', ~'concrete', ~'asbestos';
-
-@color-list-length: length(@color-list);

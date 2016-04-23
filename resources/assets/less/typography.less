@@ -1,0 +1,78 @@
+
+@import "variables";
+
+//--------------------------------------------------------------------------
+// PLATONIC TYPOGRAPHY
+//--------------------------------------------------------------------------
+
+html{
+	font-size: @base-font-size;
+	font-family: @base-font-family, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 1.5rem;
+	text-rendering: optimizeLegibility;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+	line-height: 1.5em;
+	@media @tablet{
+		line-height: 1.6em;
+	}
+	@media @laptop{
+		line-height: 1.7em;
+	}
+	@media @desktop{
+		line-height: 1.8em;
+	}
+}
+
+p{ margin-bottom: 1.5rem; }
+
+i, em{ font-style: italic; }
+
+b, strong{ font-weight: bold; }
+
+small{ font-size: 0.8em; }
+
+mark{ background-color: @sun-flower; padding: 0.2rem; }
+
+ins{ text-decoration: underline; }
+
+del{ text-decoration: line-through; }
+
+sub{ vertical-align: sub; font-size: 0.8em; }
+
+sup{ vertical-align: super; font-size: 0.8em; }
+
+//--------------------------------------------------------------------------
+// PLATONIC HEADINGS
+//--------------------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: 400;
+}
+h1{ font-size: 3rem; margin: 0; }
+h2{ font-size: 2.6rem; }
+h3{ font-size: 2.2rem; }
+h4{ font-size: 1.8rem; }
+h5{ font-size: 1.4rem; }
+h6{ font-size: 1rem; }
+
+//--------------------------------------------------------------------------
+// PLATONIC TYPOGRAPHY HELPERS
+//--------------------------------------------------------------------------
+
+.bold-text{ font-weight: bold; }
+
+.italic-text{ font-style: italic; }
+
+.marked-text{ background-color: @sun-flower; padding: 0.2rem; }
+
+.inserted-text{ text-decoration: underline; }
+
+.deleted-text{ text-decoration: line-through; }
+
+.subscripted-text{ vertical-align: sub; font-size: 0.8em; }
+
+.superscripted-text{ vertical-align: super; font-size: 0.8em; }

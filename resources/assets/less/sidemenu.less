@@ -7,23 +7,22 @@
 //--------------------------------------------------------------------------
 
 .has-side-menu{
-	padding-left: @side-menu-size;
+	@media @tablet{
+		padding-left: @side-menu-size;
+	}
 }
 
 .side-menu{
 
-	width: @side-menu-size;
+	width: 100%;
 	max-width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
+	height: auto;
 	overflow: hidden;
-	background-color: @black;
+	background-color: @wet-asphalt;
+	color: @white;
 
 	ul{
 		width: 100%;
-		//overflow-y: auto;
-		overflow: hidden;
 		list-style: none;
 
 		li{
@@ -31,11 +30,11 @@
 			min-height: 2.5rem;
 			height: auto;
 			position: relative;
-			color: @white;
-			background-color: @black;
+			color: inherit;
+
 
 			&:hover{
-				background-color: @pumpkin;
+				background-color: @midnight-blue;
 				cursor: pointer;
 			}
 
@@ -52,19 +51,53 @@
 
 			a{
 				width: 100%;
-				height: 100%;
-				position: absolute;
-				display: flex;
-				align-items: center;
-				vertical-align: middle;
-				color: @white;
+				height: auto;
+				min-height: 2.5rem;
+				padding: 0.5rem 1rem;
+				.display-flex();
+				.flex-flow(row, nowrap);
+				.justify-content(flex-start);
+				.align-items(center);
+				.align-content(center);
+				color: inherit;
+
+				> *{
+					padding-right: 1rem;
+					max-width: 100%;
+					word-wrap: break-word;
+				}
+
 			}
-			i, span{
-				padding-left: 1rem;
-			}
+			
 		}
 
 	}
 	
+	@media @tablet{
+		width: @side-menu-size;
+		height: 100%;
+		position: absolute;
+		left: 0;
+
+		ul{
+
+			li{
+				position: relative;
+
+				&.active::before{
+					content: "";
+					position: absolute;
+					top: 50%;
+					right: -0.5rem;
+					height: 1rem;
+					width: 1rem;
+					.translate-and-rotate(0%,-50%, 45deg);
+					background-color: @white;
+				}
+
+			}
+
+		}
+	}
 
 }

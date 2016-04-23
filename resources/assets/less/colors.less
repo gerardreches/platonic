@@ -5,20 +5,21 @@
 // PLATONIC COLORS SYSTEM
 //--------------------------------------------------------------------------
 
-.generate-color-system(@color-list-length);
+.generate-color-system(length(@color-list));
 
 .generate-color-system(@number, @i: 1) when (@i =< @number) {
 	@name: extract(@color-list, @i);
 	
-	.@{name}-text-color { color: @@name; }
+	.@{name}-text-color { color: @@name !important; }
 	.@{name}-border-color {border-color: @@name !important;}
-	.@{name}-background { background-color: @@name; }
+	.@{name}-background { background-color: @@name !important; }
+	.soft-@{name}-background { background-color: fade(@@name, 25%) !important; }
 	.@{name}-ribbed-background {
-		background: @@name linear-gradient(-45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
-		background-size: 40px 40px;
+		background: @@name linear-gradient(-45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent) !important;
+		background-size: 40px 40px !important;
 	}
-	.@{name}-background-on-hover {&:hover{background: @@name;}}
-	.@{name}-background-on-hover {&:hover{background: @@name;}}
+	.@{name}-background-on-hover {&:hover{background: @@name !important;}}
+	.@{name}-background-on-hover {&:hover{background: @@name !important;}}
 	
 	
 	.generate-color-system(@number, (@i + 1));

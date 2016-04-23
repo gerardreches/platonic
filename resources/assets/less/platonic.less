@@ -3,26 +3,16 @@
 @import "mixins";
 
 @import "reset";
+@import "typography";
 @import "colors";
-@import "grid";
+@import "grids";
+@import "tables";
+@import "headers";
 @import "sidemenu";
 
 //--------------------------------------------------------------------------
 // PLATONIC MAIN ELEMENTS
 //--------------------------------------------------------------------------
-
-html{
-	font-size: @base-font-size;
-	font-family: @base-font-family, sans-serif;
-	font-style: normal;
-	font-weight: 300;
-	line-height: 1.5rem;
-	text-rendering: optimizeLegibility;
-}
-
-body{
-	background-color: @white;
-}
 
 .main-fluid-container, .main-container{
 	height: 100%;
@@ -54,48 +44,9 @@ body{
 	height: 2rem;
 }
 
-.header{
-	width: 100%;
-	height: 3.5rem;
-	display: flex;
-	align-items: center;
-	vertical-align: middle;
-	color: white;
-	background-color: #27ae60;
-	padding: 0 1rem;
-}
-
-h1, h2, h3, h4, h5, h6{
-	font-weight: bold;
-	line-height: 1.5em;
-	@media @tablet{
-		line-height: 1.6em;
-	}
-	@media @laptop{
-		line-height: 1.7em;
-	}
-	@media @desktop{
-		line-height: 1.8em;
-	}
-}
-h1{
-	font-size: 3rem;
-	margin: 0;
-}
-h2{
-	font-size: 2.6rem;
-}
-h3{
-	font-size: 2.2rem;
-}
-h4{
-	font-size: 1.8rem;
-}
-h5{
-	font-size: 1.4rem;
-}
-h6{
-	font-size: 1rem;
+img{
+	max-height: 100%;
+	.border-radius(50%);
 }
 
 .message-box{
@@ -122,14 +73,3 @@ h6{
 	}
 }
 
-p{
-	margin-bottom: 1.5rem;
-}
-
-i, em{
-	font-style: italic;
-}
-
-b, strong{
-	font-weight: bold;
-}
