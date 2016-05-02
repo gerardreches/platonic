@@ -1,0 +1,25 @@
+
+@import "variables";
+@import "mixins";
+
+//--------------------------------------------------------------------------
+// HELPERS
+//--------------------------------------------------------------------------
+
+.full-parent{
+	width: 100%;
+	height: 100%;
+}
+
+.center-items{
+	width: 100%;
+	height: 100%;
+	.display-flex();
+	.flex-flow(row, wrap);
+	.justify-content(center);
+	.align-items(center);
+}
+
+.centered{
+	margin: auto;
+}

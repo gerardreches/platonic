@@ -1,0 +1,58 @@
+
+@import "variables";
+@import "mixins";
+
+//--------------------------------------------------------------------------
+// PLATONIC BUTTONS
+//--------------------------------------------------------------------------
+
+.button, .success-button, .info-button, .danger-button, .warning-button{
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	border: 1px solid @silver;
+	text-align: center;
+	background-color: @clouds;
+	.border-radius(0.25rem);
+	&:hover{
+		cursor: pointer;
+		background-color: @silver;
+	}
+}
+
+.block-button{
+	display: block;
+	width: 100%;
+}
+
+.success-button{
+	color: white;
+	background-color: @emerald;
+	border-color: @nephritis;
+	&:hover{
+		background-color: @nephritis;
+	}
+}
+.info-button{
+	color: white;
+	background-color: @emerald;
+	border-color: @nephritis;
+	&:hover{
+		background-color: @nephritis;
+	}
+}
+.danger-button{
+	color: white;
+	background-color: @alizarin;
+	border-color: @pomegranate;
+	&:hover{
+		background-color: @pomegranate;
+	}
+}
+.warning-button{
+	color: white;
+	background-color: @orange;
+	border-color: @carrot;
+	&:hover{
+		background-color: @carrot;
+	}
+}

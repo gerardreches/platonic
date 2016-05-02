@@ -11,7 +11,7 @@ class Post extends Model
 
 	use SoftDeletes;
 
-	protected $dates = ['deleted_at'];
+	protected $dates = ['published_at', 'deleted_at'];
 	
 	// Referenced table name. By default it takes the plural lowercase name of the class.
     protected $table = 'blog_posts';
@@ -25,6 +25,11 @@ class Post extends Model
 
     public function user(){
         return $this->belongsTo(User::class);
+    }
+    
+    public function scopePublished($query)
+    {
+        return $query->where('published_at', '<=', Carbon::now());
     }
 
     // If you want to override the default primary key.

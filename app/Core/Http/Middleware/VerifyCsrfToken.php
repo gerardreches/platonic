@@ -1,6 +1,6 @@
 <?php
 
-namespace Platonic\Http\Middleware;
+namespace Platonic\Core\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 

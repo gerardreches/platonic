@@ -10,81 +10,32 @@
 	width: 100%;
 	border-spacing: 0;
 	border-collapse: collapse;
-}
 
-.table{
-	> thead{
-		> tr{
-			> th{
-				border-bottom: 2px solid @silver;
-				text-align: left;
-				font-weight: bold;
-				padding: 0.5rem;
-			}
-		}
+	> thead > tr > th{
+		border-bottom: 2px solid @silver;
+		text-align: left;
+		font-weight: bold;
+		padding: 0.5rem;
 	}
-	
-	> tbody{
-		> tr{
-			> td{
-				border-top: 1px solid @silver;
-				padding: 0.5rem;
-			}
-		}
-	}
-
-}
-
-.bordered-table{
-	> thead{
-		> tr{
-			> th{
-				border: 1px solid @silver;
-				border-bottom: 2px solid @silver;
-				text-align: left;
-				font-weight: bold;
-				padding: 0.5rem;
-			}
-		}
-	}
-	
-	> tbody{
-		> tr{
-			> td{
-				border: 1px solid @silver;
-				padding: 0.5rem;
-			}
-		}
-	}
-
-}
-
-.striped-table{
-	> thead{
-		> tr{
-			> th{
-				border-bottom: 2px solid @silver;
-				text-align: left;
-				font-weight: bold;
-				padding: 0.5rem;
-			}
-		}
-	}
-	
-	> tbody{
-		> tr{
-			> td{
-				border-top: 1px solid @silver;
-				padding: 0.5rem;
-			}
-			&:nth-of-type(even){
-				background-color: @clouds;
-			}
-		}
+	> tbody > tr > td{
+		border-top: 1px solid @silver;
+		padding: 0.5rem;
 	}
 
 	@media @tablet{
 		
 	}
+}
 
+.bordered-table{
+	> thead > tr > th,
+	> tbody > tr > td{
+		border: 1px solid @silver;
+	}
+}
+
+.striped-table{
+	> tbody > tr:nth-of-type(even){
+		background-color: @clouds;
+	}
 }

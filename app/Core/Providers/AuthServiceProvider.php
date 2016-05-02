@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Platonic\Model' => 'Platonic\Policies\ModelPolicy',
+        'Platonic\Core\Model' => 'Platonic\Core\Policies\ModelPolicy',
     ];
 
     /**

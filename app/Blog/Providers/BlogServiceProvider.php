@@ -16,8 +16,8 @@ class BlogServiceProvider extends ServiceProvider
 	 */
 	public function boot(){
 		
-		DashboardMenu::addItem( 'Posts', 'fa fa-pencil', route('core::blog_posts') );
-		DashboardMenu::addItem( 'Comments', 'fa fa-comments', route('core::blog_comments') );
+		DashboardMenu::addItem( 'Posts', 'fa fa-pencil', route('dashboard::blog::posts') );
+		DashboardMenu::addItem( 'Comments', 'fa fa-comments', route('dashboard::blog::comments') );
 
 	}
 

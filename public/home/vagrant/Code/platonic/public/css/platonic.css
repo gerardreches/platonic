@@ -150,15 +150,6 @@ h6 {
   vertical-align: super;
   font-size: 0.8em;
 }
-.centered-text {
-  text-align: center;
-}
-.left-aligned-text {
-  text-align: left;
-}
-.right-aligned-text {
-  text-align: right;
-}
 .black-text-color {
   color: #141414 !important;
 }
@@ -717,13 +708,6 @@ h6 {
 .five-sixth-width {
   width: 83.33333333%;
 }
-input[type=text],
-input[type=password] {
-  font-size: 1rem;
-  height: auto;
-  width: 100%;
-  padding: 1rem 1rem;
-}
 .table,
 .bordered-table,
 .striped-table {
@@ -783,9 +767,8 @@ input[type=password] {
   margin-right: 0;
 }
 .panel {
-  width: 100%;
+  width: 360px;
   height: auto;
-  background-color: white;
 }
 .button,
 .success-button,
@@ -1039,6 +1022,10 @@ input[type=password] {
 }
 .centered {
   margin: auto;
+}
+.panel {
+  width: 360px;
+  height: auto;
 }
 .main-fluid-container,
 .main-container {

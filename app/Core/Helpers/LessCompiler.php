@@ -4,28 +4,21 @@ use Illuminate\Support\Facades\Storage;
 
 if (! function_exists('compile_less')) {
 
-	function compile_less($compress = true){
-
-		$input = 'platonic.less';
-		$output = 'platonic.css';
-
-		$inputFile = base_path('resources/assets/less/').$input;
-		$outputFile = public_path('css/').$output;
+	function compile_less($inputFile, $outputFile, $compress = true, $vars = [] ){
 
 		try{
 
 			$options = array('compress' => $compress);
 			$parser = new Less_Parser( $options );
 
-			$parser->parseFile( $inputFile, base_path('resources/assets/less/') );
+			$parser->parseFile( $inputFile, implode('/', explode('/', $inputFile, -1)) );
 
-			$parser->ModifyVars(array(
-				'base_font_size' => '16px',
-				'base_font_family' => '"Varela Round"'
-			));
+			if(!empty($vars)){
+				$parser->ModifyVars($vars);
+			}
 
-			Storage::put('public/css/'.$output, $parser->getCss());
-
+			Storage::disk('public')->put($outputFile, $parser->getCss());
+			
 		}catch (Exception $e){
 			echo "Error compiling LESS files: ".$e->getMessage();
 		}

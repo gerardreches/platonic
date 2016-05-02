@@ -1,6 +1,6 @@
 <?php
 
-namespace Platonic\Http\Middleware;
+namespace Platonic\Core\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

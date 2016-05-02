@@ -33,14 +33,16 @@
 					<td>{{ $module['author'] }}</td>
 					<td>{{ $module['description'] }}</td>
 					<td>
-						@if($module['enabled'])
-							<a href="">
-								<button>Deactivate</button>
-							</a>
-						@else
-							<a href="">
-								<button>Activate</button>
-							</a>
+						@if($module['slug'] !== 'core')
+							@if($module['enabled'])
+								{!! Form::open(['route' =>['dashboard::modules::disable', 'slug' => $module['slug'] ], 'method' => 'put']) !!}
+									{!! Form::submit('Deactivate', ['class' => 'danger-button block-button']) !!}
+								{!! Form::close() !!}
+							@else
+								{!! Form::open(['route' =>['dashboard::modules::enable', 'slug' => $module['slug'] ], 'method' => 'put']) !!}
+									{!! Form::submit('Activate', ['class' => 'success-button block-button']) !!}
+								{!! Form::close() !!}
+							@endif
 						@endif
 					</td>
 				</tr>

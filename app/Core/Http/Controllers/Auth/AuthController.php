@@ -5,7 +5,7 @@ namespace Platonic\Core\Http\Controllers\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Platonic\Core\Http\Controllers\Controller;
-use Platonic\User;
+use Platonic\Core\User;
 use Validator;
 
 class AuthController extends Controller
@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = 'dashboard';
 
     /**
      * Create a new authentication controller instance.
@@ -69,4 +69,10 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function getLogin()
+    {
+        return view('core::auth.login');
+    }
+    
 }

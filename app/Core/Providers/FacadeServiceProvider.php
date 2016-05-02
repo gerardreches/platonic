@@ -26,14 +26,14 @@ class FacadeServiceProvider extends ServiceProvider
 		//	must have the same name in order to work.
 
 		foreach (Module::enabled() as $module) {
-			$this->registerFacades( $module['name'] );
+			$this->registerFacades( $module );
 		}
 		
 	}
 
-	protected function registerFacades($moduleName) {
+	protected function registerFacades($module) {
 
-        foreach (glob(module_path_of($moduleName,'Facades').'/*.php') as $filename){
+        foreach (glob(module_path_for('Facades', $module).'/*.php') as $filename){
 
         	if (File::isFile($filename)) {
 
@@ -41,15 +41,15 @@ class FacadeServiceProvider extends ServiceProvider
 
                 //	Register the class in the IoC container.
 	           	if ( in_array($className, $this->mustBeSingleton, true) ) {
-	           		$this->app->singleton($className, module_namespace_of($moduleName,'Classes') . '\\' . $className);
+	           		$this->app->singleton($className, module_namespace_for('Classes', $module) . '\\' . $className);
 	           	}else{
-	           		$this->app->bind($className, module_namespace_of($moduleName,'Classes') . '\\' . $className);
+	           		$this->app->bind($className, module_namespace_for('Classes', $module) . '\\' . $className);
 	           	}
 	            
 	           	//	Register a facade alias.
 	            if ( in_array($className, $this->mustHaveAlias, true) ) {
 	           		$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-					$loader->alias($className, module_namespace_of($moduleName,'Facades').'\\'.$className);
+					$loader->alias($className, module_namespace_for('Facades', $module).'\\'.$className);
 	           	}
 				
             }

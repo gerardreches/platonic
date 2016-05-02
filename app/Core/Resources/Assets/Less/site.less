@@ -1,0 +1,30 @@
+
+//--------------------------------------------------------------------------
+// VARIABLES
+//--------------------------------------------------------------------------
+
+@login-background-image: "http://static.vecteezy.com/system/resources/previews/000/094/491/original/polygonal-texture-background-vector.jpg";
+
+//--------------------------------------------------------------------------
+// SITE CUSTOMIZABLES
+//--------------------------------------------------------------------------
+
+#login-background{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: -1000;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-image: url(@login-background-image);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+}

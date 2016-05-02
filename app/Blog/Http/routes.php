@@ -12,19 +12,29 @@
 */
 
 Route::group(['prefix' => 'blog', 'as' => 'blog::'], function() {
-	Route::get('/', 'PostsController@index')->name('posts');
+
+	Route::get('/', [
+		'as' => 'posts',
+		'uses' => 'PostsController@index'
+	]);
+	
 });
 
-Route::group(['prefix' => 'panel', 'as' => 'core::'], function() {
+Route::group(['prefix' => 'dashboard', 'as' => 'dashboard::'], function() {
 
-	Route::get('/posts', [
-		'as' => 'blog_posts',
-		'uses' => 'ModulesController@index'
-	]);
+	Route::group(['prefix' => 'blog', 'as' => 'blog::'], function() {
 
-	Route::get('/comments', [
-		'as' => 'blog_comments',
-		'uses' => 'OptionsController@index'
-	]);
+		Route::get('/posts', [
+			'as' => 'posts',
+			'uses' => 'PostsController@index'
+		]);
+
+		Route::get('/comments', [
+			'as' => 'comments',
+			'uses' => 'CommentsController@index'
+		]);
+		
+	});
+	
 
 });

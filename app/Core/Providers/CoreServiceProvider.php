@@ -5,6 +5,7 @@ namespace Platonic\Core\Providers;
 use App;
 use Caffeinated\Modules\Facades\Module;
 use Config;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Lang;
 use Platonic\Core\Components\Facades\DashboardMenu;
@@ -19,12 +20,27 @@ class CoreServiceProvider extends ServiceProvider
 	public function boot(){
 		
 		if ($this->app->environment() == 'local') {
-            compile_less(false);
+
+			// Compile Platonic CSS Framework
+            compile_less(
+            	base_path('resources/assets/less/platonic.less'), 
+            	'css/platonic.css',
+            	false
+            );
+
+            // Compile custom site CSS
+            compile_less(
+            	config('modules.path').'/Core/Resources/Assets/Less/site.less',
+            	'css/site.css',
+            	false
+            );
+
         }
 
-		DashboardMenu::addItem( 'Resume', 'fa fa-tachometer', route('core::dashboard') );
-		DashboardMenu::addItem( 'Modules', 'fa fa-cube', route('core::modules') );
-		DashboardMenu::addItem( 'Settings', 'fa fa-cog', route('core::settings') );
+		DashboardMenu::addItem( 'Resume', 'fa fa-tachometer', route('dashboard::resume::index') );
+		DashboardMenu::addItem( 'Modules', 'fa fa-cube', route('dashboard::modules::index') );
+		DashboardMenu::addItem( 'Users', 'fa fa-users', route('dashboard::modules::index') );
+		DashboardMenu::addItem( 'Settings', 'fa fa-cog', route('dashboard::settings') );
 
 	}
 
@@ -40,6 +56,9 @@ class CoreServiceProvider extends ServiceProvider
 		if ($this->app->environment() == 'local') {
             App::register('Platonic\Core\Providers\FactoryServiceProvider');
         }
+
+        // Set the default Controllers namespace to Core controllers namespace.
+        URL::setRootControllerNamespace('Platonic\Core\Http\Controllers');
 
 		$this->registerNamespaces();
 	}
