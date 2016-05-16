@@ -151,12 +151,13 @@ return [
         /*
          * Application Service Providers...
          */
+        Caffeinated\Modules\ModulesServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Extra Packages Service Providers...
          */
-        Caffeinated\Modules\ModulesServiceProvider::class,
+        Creativeorange\Gravatar\GravatarServiceProvider::class,
 
     ],
 
@@ -206,7 +207,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Module' => Caffeinated\Modules\Facades\Module::class,
-
+        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
     ],
 
 ];

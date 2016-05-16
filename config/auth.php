@@ -65,9 +65,10 @@ return [
     */
 
     'providers' => [
+
         'users' => [
             'driver' => 'eloquent',
-            'model' => Platonic\User::class,
+            'model' => Platonic\Core\Models\User::class,
         ],
 
         // 'users' => [

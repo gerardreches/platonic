@@ -1,9 +1,12 @@
 
 <div class="side-menu">
 
-	<div class="header">
-		Platonic
+	<div class="header alizarin-background">
+		<img src="{{ asset('platonic-isotipo.png') }}" alt="">
+		<img src="{{ asset('platonic-logotipo.png') }}" alt="" style="padding-left: 0.5rem">
 	</div>
+	
+	<div class="gap"></div>
 
 	<ul>
 		@foreach(DashboardMenu::getItems() as $item)

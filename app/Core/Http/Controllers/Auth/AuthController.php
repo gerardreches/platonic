@@ -2,10 +2,11 @@
 
 namespace Platonic\Core\Http\Controllers\Auth;
 
+use Creativeorange\Gravatar\Facades\Gravatar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Platonic\Core\Http\Controllers\Controller;
-use Platonic\Core\User;
+use Platonic\Core\Models\User;
 use Validator;
 
 class AuthController extends Controller
@@ -49,8 +50,8 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'username' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:core_users',
             'password' => 'required|min:6|confirmed',
         ]);
     }
@@ -64,15 +65,23 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'username' => $data['username'],
+            'display_name' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'profile_picture' => Gravatar::get($data['email']),
+            'active' => true,
         ]);
     }
 
     public function getLogin()
     {
         return view('core::auth.login');
+    }
+
+    public function getRegister()
+    {
+        return view('core::auth.register');
     }
     
 }

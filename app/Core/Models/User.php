@@ -2,18 +2,23 @@
 
 namespace Platonic\Core\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
-class User extends Model
+class User extends Authenticatable
 {
+
     protected $table = 'core_users';
 
-    protected $guarded = [
-    	'id',
-    	'user_id',
-    	'timestamps'
+    protected $fillable = [
+        'username', 'email', 'password', 'display_name', 'profile_picture'
     ];
 
-    // If you want to change the date format for the timestamps
-    //protected $dateFormat = 'Y-m-d H:i:s';
+    protected $hidden = [
+        'password', 'active', 'remember_token',
+    ];
+
+    public function setPasswordAttribute($password){
+        $this->attributes['password'] = Hash::needsRehash($password) ? Hash::make($password) : $password;
+    }
 }

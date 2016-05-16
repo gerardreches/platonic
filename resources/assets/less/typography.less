@@ -45,6 +45,13 @@ sub{ vertical-align: sub; font-size: 0.8em; }
 
 sup{ vertical-align: super; font-size: 0.8em; }
 
+a{
+	color: @peter-river;
+	&:link{ color: @peter-river; }
+	&:visited{ color: @wisteria; }
+	&:hover{ text-decoration: underline; }
+}
+
 //--------------------------------------------------------------------------
 // PLATONIC HEADINGS
 //--------------------------------------------------------------------------
@@ -66,6 +73,8 @@ h6{ font-size: 1rem; }
 .bold-text{ font-weight: bold; }
 
 .italic-text{ font-style: italic; }
+
+.underlined-text{ text-decoration: underline; }
 
 .marked-text{ background-color: @sun-flower; padding: 0.2rem; }
 

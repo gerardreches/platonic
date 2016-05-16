@@ -39,7 +39,7 @@ class CoreServiceProvider extends ServiceProvider
 
 		DashboardMenu::addItem( 'Resume', 'fa fa-tachometer', route('dashboard::resume::index') );
 		DashboardMenu::addItem( 'Modules', 'fa fa-cube', route('dashboard::modules::index') );
-		DashboardMenu::addItem( 'Users', 'fa fa-users', route('dashboard::modules::index') );
+		DashboardMenu::addItem( 'Users', 'fa fa-users', route('dashboard::users::index') );
 		DashboardMenu::addItem( 'Settings', 'fa fa-cog', route('dashboard::settings') );
 
 	}

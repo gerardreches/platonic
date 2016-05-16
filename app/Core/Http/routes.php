@@ -16,7 +16,7 @@
 // Core Routes
 //--------------------------------------------------------------------------
 
-Route::group(['as' => 'core::', 'middleware' => ['web'] ], function() {
+Route::group(['as' => 'core::'], function() {
 
 
 	//--------------------------------------------------------------------------
@@ -48,8 +48,8 @@ Route::group(['as' => 'core::', 'middleware' => ['web'] ], function() {
 		//--------------------------------------------------------------------------
 
 		Route::get('register', [
-			'as' => 'showRegistrationForm',
-			'uses' => 'Auth\AuthController@showRegistrationForm'
+			'as' => 'getRegister',
+			'uses' => 'Auth\AuthController@getRegister'
 		]);
 		Route::post('register', [
 			'as' => 'register',
@@ -62,16 +62,16 @@ Route::group(['as' => 'core::', 'middleware' => ['web'] ], function() {
 		//--------------------------------------------------------------------------
 
 		Route::get('password/reset/{token?}', [
-			'as' => 'showResetForm',
-			'uses' => 'Auth\AuthController@showResetForm'
+			'as' => 'getReset',
+			'uses' => 'Auth\PasswordController@getReset'
 		]);
 		Route::post('password/email', [
 			'as' => 'sendResetLinkEmail',
-			'uses' => 'Auth\AuthController@sendResetLinkEmail'
+			'uses' => 'Auth\PasswordController@sendResetLinkEmail'
 		]);
 		Route::post('password/reset', [
 			'as' => 'reset',
-			'uses' => 'Auth\AuthController@reset'
+			'uses' => 'Auth\PasswordController@reset'
 		]);
 
 
@@ -80,7 +80,7 @@ Route::group(['as' => 'core::', 'middleware' => ['web'] ], function() {
 });
 
 
-Route::group(['prefix' => 'dashboard', 'as' => 'dashboard::', 'middleware' => ['web'] ], function() {
+Route::group(['prefix' => 'dashboard', 'as' => 'dashboard::', 'middleware' => ['auth'] ], function() {
 
 	Route::get('/', function(){
 		return redirect()->route('dashboard::resume::index');
@@ -138,6 +138,20 @@ Route::group(['prefix' => 'dashboard', 'as' => 'dashboard::', 'middleware' => ['
 		Route::put('{slug}/disable', [
 			'as' => 'disable',
 			'uses' => 'ModulesController@disable'
+		]);
+		
+	});
+
+
+	//--------------------------------------------------------------------------
+	// Users Routes
+	//--------------------------------------------------------------------------
+
+	Route::group(['prefix' => 'users', 'as' => 'users::'], function() {
+
+		Route::get('/', [
+			'as' => 'index',
+			'uses' => 'UsersController@index'
 		]);
 		
 	});

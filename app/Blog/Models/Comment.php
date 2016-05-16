@@ -3,6 +3,7 @@
 namespace Platonic\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Platonic\Core\Models\User;
 
 class Comment extends Model
 {
@@ -12,6 +13,10 @@ class Comment extends Model
     	'id',
     	'timestamps'
     ];
+
+    public function user(){
+    	return $this->belongsTo(User::class);
+    }
 
     // If you want to change the date format for the timestamps
     //protected $dateFormat = 'Y-m-d H:i:s';

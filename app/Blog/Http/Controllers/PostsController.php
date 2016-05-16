@@ -23,4 +23,12 @@ class PostsController extends Controller
 	public function create(){
 		return view('blog::posts.create');
 	}
+
+	public function store(PostRequest $request){
+		$article = new Post($request->all());
+
+		Auth::user()->posts()->save($article);
+
+		return redirect('posts');
+	}
 }

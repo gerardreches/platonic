@@ -1,0 +1,20 @@
+
+@import "variables";
+@import "mixins";
+
+//--------------------------------------------------------------------------
+// PLATONIC RESPONSIVE HELPERS
+//--------------------------------------------------------------------------
+
+.generate-responsive-helpers(length(@queries-list));
+
+.generate-responsive-helpers(@number, @i: 1) when (@i =< @number) {
+	@name: extract(@queries-list, @i);
+	
+	@media @@name{
+		.hide-on-@{name}{ display: none; }
+		.show-on-@{name}{ display: block; }
+	}
+	
+	.generate-responsive-helpers(@number, (@i + 1));
+}

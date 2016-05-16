@@ -12,48 +12,48 @@
 @section('content')
 	
 	<div class="fluid-grid">
-		<div class="one-third-width"></div>
-		<div class="one-third-width"></div>
 		<div class="one-third-width">
 			<div class="fluid-page">
-				<h3>Tasks</h3>
-				@include('core::common.errors')
+				<div class="panel panel-content">
+					<h3>Tasks</h3>
 
-				@if (!empty($tasks))
+					@if (!$tasks->isEmpty())
+						<div class="checklist">
+							@foreach ($tasks as $task)
+								<label>
+									{!! Form::checkbox('completed', 'true', $task->completed) !!}
+									<span>{{ $task->name }}</span>
+									{!! Form::open([ 'route' => ['dashboard::resume::destroy', 'task' => $task->id], 'method' => 'delete', 'class' => 'checklist-item-action' ]) !!}
+
+										<button type="submit">
+											<i class="fa fa-times-circle"></i>
+										</button>
+
+									{!! Form::close() !!}
+								</label>
+	                        @endforeach
+	                    </div>
+	                    <div class="gap"></div>
+					@else
+						<p>You haven't pending tasks.</p>
+					@endif
 					
-					<div class="checklist">
-					
-						@foreach ($tasks as $task)
-							<label>
-								{!! Form::checkbox('completed', 'true', $task->completed) !!}
-								<span>{{ $task->name }}</span>
-								{!! Form::open([ 'route' => ['dashboard::resume::destroy', 'task' => $task->id], 'method' => 'delete', 'class' => 'checklist-item-action' ]) !!}
+					{!! Form::open([ 'route' => ['dashboard::resume::store'] ]) !!}
+						
+						<fieldset>
+							<div class="input-group">
+								{!! Form::text('name', null, ['placeholder' => 'New task...']) !!}
 
-									<button type="submit">
-										<i class="fa fa-times-circle"></i>
-									</button>
+								<button class="success-button" type="submit">
+									<i class="fa fa-plus"></i>
+									Add Task
+								</button>
+							</div>
+							@include('core::partials.forms.fielderror', ['name' => 'name'])
+						</fieldset>
 
-								{!! Form::close() !!}
-							</label>
-                        @endforeach
-
-                    </div>
-
-				@else
-					<p>You haven't pending tasks.</p>
-				@endif
-
-				{!! Form::open([ 'route' => ['dashboard::resume::store'] ]) !!}
-
-					{!! Form::text('name', null, ['placeholder' => 'New task...']) !!}
-
-					<button class="success-button" type="submit">
-						<i class="fa fa-plus"></i>
-						Add Task
-					</button>
-
-				{!! Form::close() !!}
-
+					{!! Form::close() !!}
+				</div>
 			</div>
 		</div>
 

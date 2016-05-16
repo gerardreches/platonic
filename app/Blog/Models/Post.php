@@ -4,6 +4,7 @@ namespace Platonic\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Platonic\Blog\Models\Tag;
 use Platonic\Core\Models\User;
 
 class Post extends Model
@@ -25,6 +26,10 @@ class Post extends Model
 
     public function user(){
         return $this->belongsTo(User::class);
+    }
+
+    public function tags(){
+        return $this->belongsToMany(Tag::class, 'blog_post_tag')->withTimestamps();
     }
     
     public function scopePublished($query)

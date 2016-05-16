@@ -9,6 +9,30 @@
 	border-radius: @radius;
 }
 
+.border-top-left-radius(@top-left-radius: 0%){
+	-webkit-border-top-left-radius: @top-left-radius;
+	-moz-border-top-left-radius: @top-left-radius;
+	border-top-left-radius: @top-left-radius;
+}
+
+.border-top-right-radius(@top-right-radius: 0%){
+	-webkit-border-top-right-radius: @top-right-radius;
+	-moz-border-top-right-radius: @top-right-radius;
+	border-top-right-radius: @top-right-radius;
+}
+
+.border-bottom-left-radius(@bottom-left-radius: 0%){
+	-webkit-border-bottom-left-radius: @bottom-left-radius;
+	-moz-border-bottom-left-radius: @bottom-left-radius;
+	border-bottom-left-radius: @bottom-left-radius;
+}
+
+.border-bottom-right-radius(@bottom-right-radius: 0%){
+	-webkit-border-bottom-right-radius: @bottom-right-radius;
+	-moz-border-bottom-right-radius: @bottom-right-radius;
+	border-bottom-right-radius: @bottom-right-radius;
+}
+
 .box-sizing(@sizing: border-box) {
 	-webkit-box-sizing: @sizing;
 	-moz-box-sizing: @sizing;
@@ -47,6 +71,13 @@
 .align-content(@align: flex-start){
 	-webkit-align-content: @align;
 	align-content: @align;
+}
+
+.flex(@grow: 0, @shrink: 1, @basis: auto){
+	-webkit-flex: @grow @shrink @basis;
+	-moz-flex: @grow @shrink @basis;
+	-ms-flex: @grow @shrink @basis;
+	flex: @grow @shrink @basis;
 }
 
 .user-select(@select: none){

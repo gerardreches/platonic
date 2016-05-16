@@ -33,39 +33,38 @@
 	.justify-content(space-around);
 }
 
-.full-width{
-	width: 100%;
-}
-.half-width{
-	width: 50%;
-}
-.one-third-width{
-	width: 100% / 3;
-}
-.two-third-width{
-	width: 2 * 100% / 3;
-}
-.one-fourth-width{
-	width: 25%;
-}
-.three-fourth-width{
-	width: 75%;
-}
-.one-fifth-width{
-	width: 20%;
-}
-.two-fifth-width{
-	width: 40%;
-}
-.three-fifth-width{
-	width: 60%;
-}
-.four-fifth-width{
-	width: 80%;
-}
-.one-sixth-width{
-	width: 100% / 6;
-}
-.five-sixth-width{
-	width: 5 * 100% / 6;
+.full-width{ width: 100%; }
+.half-width{ width: 50%; }
+.one-third-width{ width: 100% / 3; }
+.two-third-width{ width: 2 * 100% / 3; }
+.one-fourth-width{ width: 25%; }
+.three-fourth-width{ width: 75%; }
+.one-fifth-width{ width: 20%; }
+.two-fifth-width{ width: 40%; }
+.three-fifth-width{ width: 60%; }
+.four-fifth-width{ width: 80%; }
+.one-sixth-width{ width: 100% / 6; }
+.five-sixth-width{ width: 5 * 100% / 6; }
+
+.generate-responsive-grids(length(@queries-list));
+
+.generate-responsive-grids(@number, @i: 1) when (@i =< @number) {
+	@name: extract(@queries-list, @i);
+	
+	@media @@name{
+		.full-width-on-@{name}{ width: 100%; }
+		.half-width-on-@{name}{ width: 50%; }
+		.one-third-width-on-@{name}{ width: 100% / 3; }
+		.two-third-width-on-@{name}{ width: 2 * 100% / 3; }
+		.one-fourth-width-on-@{name}{ width: 25%; }
+		.three-fourth-width-on-@{name}{ width: 75%; }
+		.one-fifth-width-on-@{name}{ width: 20%; }
+		.two-fifth-width-on-@{name}{ width: 40%; }
+		.three-fifth-width-on-@{name}{ width: 60%; }
+		.four-fifth-width-on-@{name}{ width: 80%; }
+		.one-sixth-width-on-@{name}{ width: 100% / 6; }
+		.five-sixth-width-on-@{name}{ width: 5 * 100% / 6; }
+	}
+	
+	.generate-responsive-grids(@number, (@i + 1));
 }

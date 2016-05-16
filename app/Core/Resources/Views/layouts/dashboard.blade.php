@@ -13,26 +13,30 @@
 
 
 @section('body')
+	
+	<div class="side-menu-layout">
 
-	@include('core::partials.sidemenu')
+		@include('core::partials.sidemenu')
 
-	<div class="fluid-container has-side-menu">
+		<div class="layout-content clouds-background">
 
-		<div class="header pomegranate-background">
-			
-			<div class="header-item"></div>
-			<div class="header-item"></div>
-			<div class="header-item">
-				<img src="https://pbs.twimg.com/profile_images/654373248776425472/SyXJajE5.jpg" alt="">
-				<span>Welcome back!</span>
+			<div class="header pomegranate-background shadowed white-text-color">
+				
+				<div class="header-item"></div>
+				<div class="header-item"></div>
+				<div class="header-item">
+					<img class="circular" src="{{ Auth::user()->profile_picture }}" alt="">
+					<span>Welcome {{ Auth::user()->username }}!</span>
+				</div>
+				
+			</div>
+
+			<div class="fluid-page">
+				@yield('content')
 			</div>
 			
 		</div>
 
-		<div class="fluid-page">
-			@yield('content')
-		</div>
-		
 	</div>
 
 @endsection

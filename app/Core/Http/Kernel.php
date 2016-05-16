@@ -50,7 +50,7 @@ class Kernel extends HttpKernel
         'guest' => \Platonic\Core\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
 
-        //Extra package routeMiddleware
+        // Packages routeMiddleware
         'module' => \Caffeinated\Modules\Middleware\IdentifyModule::class,
     ];
 }

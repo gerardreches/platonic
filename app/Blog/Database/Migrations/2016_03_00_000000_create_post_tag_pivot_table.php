@@ -23,7 +23,7 @@ class CreatePostTagPivotTable extends Migration
             $table->primary(['post_id', 'tag_id']);
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

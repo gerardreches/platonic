@@ -6,16 +6,22 @@
 // PLATONIC BUTTONS
 //--------------------------------------------------------------------------
 
-.button, .success-button, .info-button, .danger-button, .warning-button{
+.button, .success-button, .info-button, .danger-button, .warning-button, .block-button{
 	display: inline-block;
+	position: relative;
+	white-space: nowrap;
 	padding: 0.5rem 1rem;
-	border: 1px solid @silver;
+	border: 0.1rem solid @silver;
 	text-align: center;
 	background-color: @clouds;
 	.border-radius(0.25rem);
+
 	&:hover{
 		cursor: pointer;
 		background-color: @silver;
+	}
+	&:active{
+		background-color: darken(@silver, 5%);
 	}
 }
 
@@ -31,13 +37,19 @@
 	&:hover{
 		background-color: @nephritis;
 	}
+	&:active{
+		background-color: darken(@nephritis, 5%);
+	}
 }
 .info-button{
 	color: white;
-	background-color: @emerald;
-	border-color: @nephritis;
+	background-color: @peter-river;
+	border-color: @belize-hole;
 	&:hover{
-		background-color: @nephritis;
+		background-color: @belize-hole;
+	}
+	&:active{
+		background-color: darken(@belize-hole, 5%);
 	}
 }
 .danger-button{
@@ -47,6 +59,9 @@
 	&:hover{
 		background-color: @pomegranate;
 	}
+	&:active{
+		background-color: darken(@pomegranate, 5%);
+	}
 }
 .warning-button{
 	color: white;
@@ -54,5 +69,22 @@
 	border-color: @carrot;
 	&:hover{
 		background-color: @carrot;
+	}
+	&:active{
+		background-color: darken(@carrot, 5%);
+	}
+}
+
+.modern-button{
+	box-shadow: 0 2px fade(@black, 50%);
+
+	&:hover{
+		cursor: pointer;
+		background-color: @silver;
+		box-shadow: 0 2px fade(@black, 50%);
+	}
+	&:active{
+		bottom: -1px;
+		box-shadow: 0 1px fade(@black, 50%);
 	}
 }
