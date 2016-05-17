@@ -3,6 +3,7 @@
 namespace Platonic\Core\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Platonic\Core\Models\OptionGroup;
 
 class Option extends Model
 {
@@ -10,6 +11,11 @@ class Option extends Model
 
     protected $fillable = [
     	'name',
-        'completed'
+        'value',
+        'group_id'
     ];
+
+    public function group(){
+    	return $this->belongsTo(OptionGroup::class);
+    }
 }

@@ -37,8 +37,53 @@ class RouteServiceProvider extends ServiceProvider
 	 */
 	public function map(Router $router)
 	{
-		$router->group(['namespace' => $this->namespace, 'middleware' => 'web'], function($router) {
-			require (config('modules.path').'/Core/Http/routes.php');
-		});
+		$this->mapModuleRoutes($router);
+		$this->mapDashboardRoutes($router);
 	}
+
+	/**
+     * Define the "web" module routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    protected function mapModuleRoutes(Router $router)
+    {
+        $router->group(
+			[
+				'namespace' => $this->namespace,
+				'middleware' => ['web'],
+				'as' => 'core::',
+			],
+			function($router) {
+				require (config('modules.path').'/Core/Http/Routes/module.php');
+			}
+		);
+    }
+
+    /**
+     * Define the module dashboard routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     * Only authenticated users can access to these routes.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    protected function mapDashboardRoutes(Router $router)
+    {
+        $router->group(
+			[
+				'namespace' => $this->namespace,
+				'middleware' => ['web', 'auth'],
+				'prefix' => 'dashboard',
+				'as' => 'dashboard::',
+			],
+			function($router) {
+				require (config('modules.path').'/Core/Http/Routes/dashboard.php');
+			}
+		);
+    }
 }

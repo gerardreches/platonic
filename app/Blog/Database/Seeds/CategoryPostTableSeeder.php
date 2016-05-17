@@ -10,7 +10,7 @@ class CategoryPostTableSeeder extends Seeder
     
     public function run()
     {
-        factory(CategoryPost::class, 50)->create();
+        //factory(CategoryPost::class, 50)->create();
     }
 
 }

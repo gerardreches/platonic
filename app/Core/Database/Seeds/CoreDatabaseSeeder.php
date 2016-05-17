@@ -20,6 +20,10 @@ class CoreDatabaseSeeder extends Seeder
 		$this->truncate_tables();
 
 		$this->call('Platonic\Core\Database\Seeds\UsersTableSeeder');
+		$this->call('Platonic\Core\Database\Seeds\OptionGroupsTableSeeder');
+		$this->call('Platonic\Core\Database\Seeds\OptionsTableSeeder');
+
+		Model::reguard();
 	}
 
 	protected function truncate_tables(){

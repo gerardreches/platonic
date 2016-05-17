@@ -16,7 +16,13 @@ class CreateOptionsTable extends Migration
 			$table->increments('id');
 			$table->string('name')->unique()->index();
 			$table->string('value');
+			$table->integer('group_id')->unsigned();
+			$table->timestamps();
 		});
+
+		Schema::table('core_options',function(Blueprint $table){
+            $table->foreign('group_id')->references('id')->on('core_option_groups')->onDelete('cascade');
+        });
 	}
 
 	/**

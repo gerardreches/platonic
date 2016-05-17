@@ -30,6 +30,8 @@ class BlogDatabaseSeeder extends Seeder
 		$this->call('Platonic\Blog\Database\Seeds\CategoryPostTableSeeder');
 		$this->call('Platonic\Blog\Database\Seeds\CommentsTableSeeder');
 		$this->call('Platonic\Blog\Database\Seeds\PostTagTableSeeder');
+
+		Model::reguard();
 	}
 
 	protected function truncate_tables(){
