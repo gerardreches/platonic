@@ -2,6 +2,7 @@
 
 namespace Platonic\Blog\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Platonic\Blog\Models\Tag;

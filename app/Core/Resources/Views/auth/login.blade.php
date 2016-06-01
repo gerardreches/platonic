@@ -10,7 +10,7 @@
 	
 	<div id="login-background"></div>
 
-	<div class="center-items">
+	<div class="centered-items">
 		<div class="full-width half-width-on-phablet one-fourth-width-on-desktop">
 			<div class="panel">
 				<div class="panel-content">

@@ -3,28 +3,26 @@
 // PLATONIC TYPOGRAPHY VARIABLES
 //--------------------------------------------------------------------------
 
-@base-font-size: 16px;
 @base-font-family: "Varela Round";
-
 
 //--------------------------------------------------------------------------
 // PLATONIC MEDIA QUERY VARIABLES
 //--------------------------------------------------------------------------
 
 // Breakpoints
-@size-for-phablet: 32rem;
-@size-for-tablet: 48rem;
-@size-for-laptop: 64rem;
+@size-for-phablet: 32rem;	
+@size-for-tablet: 48rem;	
+@size-for-laptop: 64rem;	
 @size-for-desktop: 80rem;
 
 // Queries
-@phone: ~"screen and (max-width: @{size-for-phablet} - 1px)";
+@mobile: ~"screen and (max-width: @{size-for-phablet} - 1px)";
 @phablet: ~"screen and (min-width: @{size-for-phablet})";
 @tablet: ~"screen and (min-width: @{size-for-tablet})";
 @laptop: ~"screen and (min-width: @{size-for-laptop})";
 @desktop: ~"screen and (min-width: @{size-for-desktop})";
 
-@queries-list: phone, phablet, tablet, laptop, desktop;
+@queries-list: mobile, phablet, tablet, laptop, desktop;
 
 
 //--------------------------------------------------------------------------

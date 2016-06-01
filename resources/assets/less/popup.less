@@ -1,0 +1,25 @@
+
+@import "variables";
+@import "mixins";
+
+//--------------------------------------------------------------------------
+// POP UP MESSAGES
+//--------------------------------------------------------------------------
+
+.message-box{
+
+	width: 80%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 0px 5px 0px black;
+
+	@media @phablet{
+		width: 24rem;
+	}
+	
+	p{
+		text-align: center;
+	}
+}

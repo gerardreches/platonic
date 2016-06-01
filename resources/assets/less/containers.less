@@ -1,0 +1,33 @@
+
+@import "variables";
+@import "mixins";
+
+//--------------------------------------------------------------------------
+// CONTAINERS
+//--------------------------------------------------------------------------
+
+.main-fluid-container, .main-container{
+	min-height: 100%;
+	height: auto;
+}
+
+.main-fluid-container, .main-container, .fluid-container, .container, .page, .fluid-page{
+	width: 100%;
+}
+
+.main-container, .container, .page{
+	@media @tablet{
+		max-width: 48rem;
+		margin: auto; 
+	}
+	@media @laptop{
+		max-width: 64rem;
+	}
+	@media @desktop{
+		max-width: 80rem;
+	}
+}
+
+.page, .fluid-page{
+	padding: 1rem 2rem;
+}

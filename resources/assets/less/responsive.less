@@ -12,8 +12,8 @@
 	@name: extract(@queries-list, @i);
 	
 	@media @@name{
-		.hide-on-@{name}{ display: none; }
-		.show-on-@{name}{ display: block; }
+		.hidden-on-@{name}{ display: none; }
+		.shown-on-@{name}{ display: block; }
 	}
 	
 	.generate-responsive-helpers(@number, (@i + 1));
