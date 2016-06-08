@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Lang;
 use Platonic\Core\Components\Facades\DashboardMenu;
-use Platonic\Core\Models\OptionGroup;
 use View;
 
 class CoreServiceProvider extends ServiceProvider
@@ -27,19 +26,6 @@ class CoreServiceProvider extends ServiceProvider
             	base_path('resources/assets/less/platonic.less'), 
             	'css/platonic.css',
             	false
-            );
-
-            $options = OptionGroup::findByName('Site CSS')->first()->options()->get();
-            $vars = [];
-            foreach($options as $option){
-            	$vars[$option->name] = $option->value;
-            }
-            // Compile custom site CSS
-            compile_less(
-            	config('modules.path').'/Core/Resources/Assets/Less/site.less',
-            	'css/site.css',
-            	false,
-            	$vars
             );
 
         }

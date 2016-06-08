@@ -35,7 +35,12 @@
 }
 
 .striped-table{
-	> tbody > tr:nth-of-type(even){
-		background-color: @clouds;
+	> tbody{
+		> tr:nth-of-type(even){
+			background-color: @clouds;
+		}
+		> tr:nth-of-type(odd){
+			background-color: white;
+		}
 	}
 }

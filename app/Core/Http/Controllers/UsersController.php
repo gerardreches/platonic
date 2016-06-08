@@ -13,12 +13,15 @@ class UsersController extends Controller
 		$users = User::all();
 		return view('core::users.index', compact('users'));
 	}
-	/*
+	
 	public function show($id){
 		$user = User::find($id)->get();
-		return view('core::users::show', compact('user'));
+		return view('core::users.show', compact('user'));
 	}
-	*/
-
+	
+	public function edit($id){
+		$user = User::find($id)->get();
+		return view('core::users.edit', compact('user'));
+	}
 
 }

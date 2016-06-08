@@ -15,12 +15,13 @@
 	
 	<div class="gap"></div>
 
-	<table class="table">
+	<table class="striped-table">
 		<thead>
 			<tr>
 				<th>Picture</th>
 				<th>Username</th>
 				<th>Display name</th>
+				<th>Email</th>
 				<th>Description</th>
 			</tr>
 		</thead>
@@ -28,10 +29,11 @@
 
 			@foreach($users as $user)
 
-				<tr class="{{ $user->active ? 'soft-emerald-background' : 'soft-alizarin-background' }}">
+				<tr class="{{ $user->active ? '' : 'soft-alizarin-background' }}">
 					<td><img class="circular" src="{{ $user->profile_picture }}" width=40 height=40 alt=""></td>
 					<td>{{ $user->username }}</td>
 					<td>{{ $user->display_name }}</td>
+					<td>{{ $user->email }}</td>
 					<td>{{ $user->description }}</td>
 				</tr>
 				

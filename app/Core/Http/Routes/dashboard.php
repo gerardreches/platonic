@@ -83,6 +83,16 @@ Route::group(['prefix' => 'users', 'as' => 'users::'], function() {
 		'as' => 'index',
 		'uses' => 'UsersController@index'
 	]);
+
+	Route::get('{id}', [
+		'as' => 'show',
+		'uses' => 'UsersController@show'
+	]);
+
+	Route::get('edit/{id}', [
+		'as' => 'edit',
+		'uses' => 'UsersController@edit'
+	]);
 	
 });
 

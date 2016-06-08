@@ -89,7 +89,8 @@ mark {
 ins {
   text-decoration: underline;
 }
-del {
+del,
+s {
   text-decoration: line-through;
 }
 sub {
@@ -155,7 +156,8 @@ h6 {
 .inserted-text {
   text-decoration: underline;
 }
-.deleted-text {
+.deleted-text,
+.strikethrough-text {
   text-decoration: line-through;
 }
 .subscripted-text {
@@ -273,7 +275,7 @@ img {
   -o-object-fit: contain;
   object-fit: contain;
 }
-.circular {
+.circular-image {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -1130,10 +1132,12 @@ textarea:focus {
 .striped-table > tbody > tr:nth-of-type(even) {
   background-color: #ecf0f1;
 }
+.striped-table > tbody > tr:nth-of-type(odd) {
+  background-color: white;
+}
 .header {
   width: 100%;
   height: 3.5rem;
-  padding: 0.5rem 1rem;
   display: flex;
   display: -webkit-flex;
   -webkit-flex-flow: row nowrap;
@@ -1145,8 +1149,14 @@ textarea:focus {
   color: black;
   background-color: #ecf0f1;
 }
-.header > .header-item {
+.header > .header-item,
+.header > .header-button,
+.header > .header-dropdown {
+  display: block;
   height: 100%;
+  padding: 0.5rem 1rem;
+  color: inherit;
+  background-color: inherit;
   display: flex;
   display: -webkit-flex;
   -webkit-flex-flow: row nowrap;
@@ -1154,11 +1164,65 @@ textarea:focus {
   -webkit-align-items: center;
   align-items: center;
 }
-.header > .header-item > * {
-  margin-right: 1rem;
+.header > .header-item > .item ~ .item,
+.header > .header-button > .item ~ .item,
+.header > .header-dropdown > .item ~ .item {
+  margin-left: 1rem;
 }
-.header > .header-item > *:last-child {
-  margin-right: 0;
+.header > .header-button:hover,
+.header .header-dropdown:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.header > .header-dropdown {
+  position: relative;
+}
+.header > .header-dropdown > ul {
+  display: none;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 100%;
+  list-style: none;
+  background-color: white;
+  color: black;
+}
+.header > .header-dropdown > ul > li {
+  width: 100%;
+  min-height: 2.5rem;
+  height: auto;
+  position: relative;
+  color: inherit;
+}
+.header > .header-dropdown > ul > li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.header > .header-dropdown > ul > li > a {
+  width: 100%;
+  height: auto;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-align-content: center;
+  align-content: center;
+  color: inherit;
+  text-decoration: none;
+}
+.header > .header-dropdown > ul > li > a > .fa {
+  min-width: 2rem;
+  max-width: 100%;
+}
+.header > .header-dropdown > ul > li > a > span {
+  padding-right: 1rem;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 .panel {
   width: 100%;
