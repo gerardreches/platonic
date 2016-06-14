@@ -15,7 +15,9 @@ class CreateOptionsTable extends Migration
 		Schema::create('core_options', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('name')->unique()->index();
-			$table->string('value');
+			$table->string('value')->nullable();
+			$table->string('label');
+			$table->string('description')->nullable();
 			$table->integer('group_id')->unsigned();
 			$table->timestamps();
 		});

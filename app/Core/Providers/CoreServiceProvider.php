@@ -3,13 +3,13 @@
 namespace Platonic\Core\Providers;
 
 use App;
-use Caffeinated\Modules\Facades\Module;
+use Lang;
+use View;
 use Config;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
-use Lang;
+use Caffeinated\Modules\Facades\Module;
 use Platonic\Core\Components\Facades\DashboardMenu;
-use View;
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -33,7 +33,7 @@ class CoreServiceProvider extends ServiceProvider
 		DashboardMenu::addItem( 'Resume', 'fa fa-tachometer', route('dashboard::resume::index') );
 		DashboardMenu::addItem( 'Modules', 'fa fa-cube', route('dashboard::modules::index') );
 		DashboardMenu::addItem( 'Users', 'fa fa-users', route('dashboard::users::index') );
-		DashboardMenu::addItem( 'Settings', 'fa fa-cog', route('dashboard::settings') );
+		DashboardMenu::addItem( 'Settings', 'fa fa-cog', route('dashboard::options::index') );
 
 	}
 
@@ -42,12 +42,15 @@ class CoreServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
+		App::register('Platonic\Core\Providers\AuthServiceProvider');
 		App::register('Platonic\Core\Providers\RouteServiceProvider');
 		App::register('Platonic\Core\Providers\HelperServiceProvider');
 		App::register('Platonic\Core\Providers\FacadeServiceProvider');
 		
 		if ($this->app->environment() == 'local') {
             App::register('Platonic\Core\Providers\FactoryServiceProvider');
+            App::register('Laracasts\Generators\GeneratorsServiceProvider');
+            App::register('Platonic\Module\Generators\ModuleGeneratorsServiceProvider');
         }
 
         // Set the default Controllers namespace to Core controllers namespace.

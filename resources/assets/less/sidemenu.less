@@ -9,6 +9,7 @@
 .side-menu-layout{
 
 	width: 100%;
+	max-width: 100%;
 	min-height: 100%;
 
 	> .side-menu{
@@ -69,12 +70,12 @@
 	@media @tablet{
 		
 		.display-flex();
+		.flex-flow(row,nowrap);
 		.align-items(stretch);
 		
 		> .side-menu{
-
 			min-width: @side-menu-size;
-			width: @side-menu-size;
+			width: auto;
 			.flex(0, 1, @side-menu-size);
 
 			> ul > li.active::before{
@@ -91,6 +92,8 @@
 
 		> .layout-content{
 			min-height: 100%;
+			min-width: 0;
+			.flex(1, 1, auto);
 		}
 	}
 

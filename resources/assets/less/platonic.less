@@ -18,8 +18,29 @@
 @import "tables";
 @import "headers";
 @import "panels";
+@import "tabs";
 @import "popup";
 @import "buttons";
 @import "lists";
 @import "sidemenu";
 @import "helpers";
+
+body:before{
+	content: "mobile";
+	position: absolute;
+	font-size: 2rem;
+	right: 0;
+	bottom: 0;
+	@media @phablet{
+		content: "phablet";
+	}
+	@media @tablet{
+		content: "tablet";
+	}
+	@media @laptop{
+		content: "laptop";
+	}
+	@media @desktop{
+		content: "desktop";
+	}
+}

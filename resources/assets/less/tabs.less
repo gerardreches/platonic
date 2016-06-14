@@ -1,0 +1,65 @@
+
+@import "variables";
+@import "mixins";
+
+//--------------------------------------------------------------------------
+// PLATONIC TABS
+//--------------------------------------------------------------------------
+
+.tabbed-container{
+
+	width: 100%;
+
+	> nav{
+		width: 100%;
+		> ul{
+			width: 100%;
+			list-style: none;
+			.display-flex();
+			.flex-flow(row, nowrap);
+			> li{
+				cursor: pointer;
+				padding: 0.5rem 0.5rem 0 0.5rem;
+				.display-flex();
+				.flex-flow(row, wrap);
+				.justify-content(center);
+				.align-items(center);
+				flex: 1;
+				border: 0.0625rem solid @silver;
+				border-right: none;
+				background-color: @clouds;
+				text-align: center;
+				font-weight: bold;
+				text-transform: uppercase;
+				
+				&:last-child{
+					border-right: 0.0625rem solid @silver;
+				}
+
+				&.active{
+					cursor: default;
+					background-color: white;
+					border-bottom: none;
+					border-top: 0.3rem solid @emerald;
+				}
+
+				> *{
+					padding: 0rem 0.5rem 0.5rem 0.5rem;
+				}
+			}
+		}
+	}
+
+	> section{
+		display: none;
+		width: 100%;
+		padding: 1rem 2rem;
+		background-color: white;
+		border: 0.0625rem solid @silver;
+		&.active{
+			display: block;
+			border-top: none;
+		}
+	}
+
+}

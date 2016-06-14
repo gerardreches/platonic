@@ -10,6 +10,14 @@ class OptionGroupsTableSeeder extends Seeder
     
     public function run()
     {
-        OptionGroup::create(['name' => 'Site CSS']);
+        OptionGroup::create([
+        	'name' => 'Site options',
+        	'description' => 'Options for site configuration'
+        ]);
+
+        OptionGroup::create([
+        	'name' => 'Site CSS',
+        	'description' => 'Custom CSS values used to customize the site CSS'
+        ]);
     }
 }

@@ -40,7 +40,7 @@ Route::group(['prefix' => 'resume', 'as' => 'resume::'], function() {
 
 	Route::put('/task', [
 		'as' => 'update',
-		'uses' => 'TasksController@store'
+		'uses' => 'TasksController@update'
 	]);
 
 	Route::delete('/task/{task}', [
@@ -84,12 +84,12 @@ Route::group(['prefix' => 'users', 'as' => 'users::'], function() {
 		'uses' => 'UsersController@index'
 	]);
 
-	Route::get('{id}', [
+	Route::get('{user}', [
 		'as' => 'show',
 		'uses' => 'UsersController@show'
 	]);
 
-	Route::get('edit/{id}', [
+	Route::get('edit/{user}', [
 		'as' => 'edit',
 		'uses' => 'UsersController@edit'
 	]);
@@ -101,7 +101,16 @@ Route::group(['prefix' => 'users', 'as' => 'users::'], function() {
 // Options Routes
 //--------------------------------------------------------------------------
 
-Route::get('settings', [
-	'as' => 'settings',
-	'uses' => 'OptionsController@index'
-]);
+Route::group(['prefix' => 'settings', 'as' => 'options::'], function() {
+
+	Route::get('/', [
+		'as' => 'index',
+		'uses' => 'OptionsController@index'
+	]);
+
+	Route::put('/', [
+		'as' => 'update',
+		'uses' => 'OptionsController@update'
+	]);
+
+});

@@ -153,10 +153,6 @@ return [
          */
         Caffeinated\Modules\ModulesServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-
-        /*
-         * Extra Packages Service Providers...
-         */
         Creativeorange\Gravatar\GravatarServiceProvider::class,
 
     ],

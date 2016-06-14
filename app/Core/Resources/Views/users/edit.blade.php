@@ -11,6 +11,8 @@
 
 @section('content')
 	
-	
+	@can('edit_users', $user)
+		hola
+	@endcan
 
 @endsection

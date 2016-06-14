@@ -15,6 +15,7 @@ class CreateOptionGroupsTable extends Migration
         Schema::create('core_option_groups', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
+            $table->string('description')->nullable();
             $table->timestamp('created_at');
         });
     }

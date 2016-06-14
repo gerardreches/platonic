@@ -10,7 +10,7 @@ class OptionGroup extends Model
     protected $table = 'core_option_groups';
 
     protected $fillable = [
-    	'name'
+    	'name', 'description'
     ];
 
     public $timestamps = false;
