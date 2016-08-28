@@ -8,8 +8,9 @@
 
 form{
 	width: 100%;
+	margin: 0 auto;
 	> fieldset{
-		width: 48rem;
+		width: 100%;
 		max-width: 100%;
 		border: none;
 		margin: 0;
@@ -18,7 +19,7 @@ form{
 	}
 }
 
-input[type=text], input[type=email], input[type=password], textarea{
+input, textarea, select{
 	display: inline-block;
 	overflow: hidden;
 	font-size: 1rem;
@@ -29,37 +30,47 @@ input[type=text], input[type=email], input[type=password], textarea{
 	outline: none;
 	border: 0.1rem solid @silver;
 	.border-radius(0.25rem);
+	background-color: @white;
+
+	&:focus{
+		box-shadow: 0 0 3px fade(@peter-river, 50%);
+		border-color: @peter-river;
+	}
+
+	&:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, &:-webkit-autofill:active{
+		-webkit-box-shadow: 0 0 0px 1000px white inset;
+	}
 }
 
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus{
-	box-shadow: 0 0 3px fade(@peter-river, 50%);
-	border-color: @peter-river;
+select{
+	padding: 0 1rem !important;
+}
+
+option{
+	height: auto;
+	width: 100%;
+	max-width: 100%;
+	padding: 0.5rem 1rem;
 }
 
 .input-group{
 	width: 100%;
-	border-collapse: collapse;
 	.display-flex();
 	.flex-flow(row, nowrap);
 	.justify-content(flex-start);
 	.align-items(center);
+	border: 0.1rem solid @silver;
+	.border-radius(0.25rem) !important;
 	
 	> .input-extra{
 		height: auto;
 		padding: 0.5rem 0.7rem;
-		border: 0.1rem solid @silver;
-
 	}
-	> *{
-		.border-radius(0) !important;
+	> input, > textarea{
+		border: 0;
 	}
-	> :first-child{
-		.border-top-left-radius(0.25rem) !important;
-		.border-bottom-left-radius(0.25rem) !important;
-	}
-	> :last-child{
-		.border-top-right-radius(0.25rem) !important;
-		.border-bottom-right-radius(0.25rem) !important;
+	> input:focus, > textarea:focus{
+		box-shadow: none;
 	}
 }
 

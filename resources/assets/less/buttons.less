@@ -8,11 +8,14 @@
 
 .button, .success-button, .info-button, .danger-button, .warning-button, .block-button{
 	display: inline-block;
-	position: relative;
 	white-space: nowrap;
 	padding: 0.5rem 1rem;
 	border: 0.1rem solid @silver;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	text-align: center;
+	color: @black !important;
+	text-decoration: none !important;
 	background-color: @clouds;
 	.border-radius(0.25rem);
 
@@ -25,13 +28,27 @@
 	}
 }
 
+.button:disabled, .success-button:disabled, .info-button:disabled, .danger-button:disabled, .warning-button:disabled, .block-button:disabled{
+	cursor: not-allowed !important;
+	color: @asbestos !important;
+	border-color: @clouds !important;
+	background-color: @clouds !important;
+
+	&:hover{
+		background-color: @clouds;
+	}
+	&:active{
+		background-color: @clouds;
+	}
+}
+
 .block-button{
 	display: block;
 	width: 100%;
 }
 
 .success-button{
-	color: white;
+	color: white !important;
 	background-color: @emerald;
 	border-color: @nephritis;
 	&:hover{
@@ -42,7 +59,7 @@
 	}
 }
 .info-button{
-	color: white;
+	color: white !important;
 	background-color: @peter-river;
 	border-color: @belize-hole;
 	&:hover{
@@ -53,7 +70,7 @@
 	}
 }
 .danger-button{
-	color: white;
+	color: white !important;
 	background-color: @alizarin;
 	border-color: @pomegranate;
 	&:hover{
@@ -64,7 +81,7 @@
 	}
 }
 .warning-button{
-	color: white;
+	color: white !important;
 	background-color: @orange;
 	border-color: @carrot;
 	&:hover{

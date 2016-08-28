@@ -10,8 +10,8 @@
 .generate-color-system(@number, @i: 1) when (@i =< @number) {
 	@name: extract(@color-list, @i);
 	
-	.@{name}-text-color { color: @@name !important; }
-	.@{name}-border-color {border-color: @@name !important;}
+	.@{name}-text { color: @@name !important; }
+	.@{name}-border {border-color: @@name !important;}
 	.@{name}-background { background-color: @@name !important; }
 	.soft-@{name}-background { background-color: fade(@@name, 25%) !important; }
 	.@{name}-ribbed-background {

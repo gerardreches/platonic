@@ -6,6 +6,41 @@
 // PLATONIC LISTS
 //--------------------------------------------------------------------------
 
+ul.list, ul.selectable-list{
+	list-style: none;
+	> li{
+		position: relative;
+		border-top: 0.0625rem solid @silver;
+		padding: 0.5rem 1rem;
+		> a{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		&:first-child{
+			border-top: none;
+		}
+	}
+}
+
+ul.selectable-list{
+	> li{
+		padding-right: 3rem;
+		&:after{
+			content: "\f105";
+			font-family: "Fontawesome";
+			position: absolute;
+			right: 1rem;
+			top: 0.5rem;
+		}
+		&:hover{
+			background-color: @clouds;
+		}
+	}
+}
+
 .checklist{
 
 	> label {

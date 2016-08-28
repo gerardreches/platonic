@@ -27,7 +27,7 @@ p, h1, h2, h3, h4, h5, h6{
 	}
 }
 
-p{ margin-bottom: 1.5rem; }
+p{ margin-bottom: 1rem; }
 
 i, em{ font-style: italic; }
 
@@ -35,7 +35,7 @@ b, strong{ font-weight: bold; }
 
 small{ font-size: 0.8em; }
 
-mark{ background-color: @sun-flower; padding: 0.2rem; }
+mark{ background-color: @sun-flower; padding: 0.2em; }
 
 ins{ text-decoration: underline; }
 
@@ -50,6 +50,9 @@ a{
 	&:link{ color: @peter-river; }
 	&:visited{ color: @wisteria; }
 	&:hover{ text-decoration: underline; }
+	&.unstyled{
+		color: inherit !important;
+	}
 }
 
 //--------------------------------------------------------------------------
@@ -76,7 +79,7 @@ h6{ font-size: 1rem; }
 
 .underlined-text{ text-decoration: underline; }
 
-.marked-text{ background-color: @sun-flower; padding: 0.2rem; }
+.marked-text{ background-color: @sun-flower; padding: 0.2em; }
 
 .inserted-text{ text-decoration: underline; }
 
@@ -93,3 +96,7 @@ h6{ font-size: 1rem; }
 .right-aligned-text{ text-align: right; }
 
 .justified-text{ text-align: justify; }
+
+.underscored-title{
+	border-bottom: 0.05rem solid @silver;
+}
