@@ -10,35 +10,34 @@
 	display: inline-block;
 	white-space: nowrap;
 	padding: 0.5rem 1rem;
-	border: 0.1rem solid @silver;
+	border: 0.1rem solid @silver !important;
 	font-size: 1rem;
 	line-height: 1.5rem;
 	text-align: center;
 	color: @black !important;
 	text-decoration: none !important;
-	background-color: @clouds;
+	background-color: @clouds !important;
 	.border-radius(0.25rem);
 
 	&:hover{
 		cursor: pointer;
-		background-color: @silver;
+		background-color: @silver !important;
 	}
 	&:active{
-		background-color: darken(@silver, 5%);
+		background-color: darken(@silver, 5%) !important;
 	}
-}
+	&:disabled{
+		cursor: not-allowed !important;
+		color: @asbestos !important;
+		border-color: @clouds !important;
+		background-color: @clouds !important;
 
-.button:disabled, .success-button:disabled, .info-button:disabled, .danger-button:disabled, .warning-button:disabled, .block-button:disabled{
-	cursor: not-allowed !important;
-	color: @asbestos !important;
-	border-color: @clouds !important;
-	background-color: @clouds !important;
-
-	&:hover{
-		background-color: @clouds;
-	}
-	&:active{
-		background-color: @clouds;
+		&:hover{
+			background-color: @clouds !important;
+		}
+		&:active{
+			background-color: @clouds !important;
+		}
 	}
 }
 
@@ -49,46 +48,46 @@
 
 .success-button{
 	color: white !important;
-	background-color: @emerald;
-	border-color: @nephritis;
+	background-color: @emerald !important;
+	border-color: @nephritis !important;
 	&:hover{
-		background-color: @nephritis;
+		background-color: @nephritis !important;
 	}
 	&:active{
-		background-color: darken(@nephritis, 5%);
+		background-color: darken(@nephritis, 5%) !important;
 	}
 }
 .info-button{
 	color: white !important;
-	background-color: @peter-river;
-	border-color: @belize-hole;
+	background-color: @peter-river !important;
+	border-color: @belize-hole !important;
 	&:hover{
-		background-color: @belize-hole;
+		background-color: @belize-hole !important;
 	}
 	&:active{
-		background-color: darken(@belize-hole, 5%);
+		background-color: darken(@belize-hole, 5%) !important;
 	}
 }
 .danger-button{
 	color: white !important;
-	background-color: @alizarin;
-	border-color: @pomegranate;
+	background-color: @alizarin !important;
+	border-color: @pomegranate !important;
 	&:hover{
-		background-color: @pomegranate;
+		background-color: @pomegranate !important;
 	}
 	&:active{
-		background-color: darken(@pomegranate, 5%);
+		background-color: darken(@pomegranate, 5%) !important;
 	}
 }
 .warning-button{
 	color: white !important;
-	background-color: @orange;
-	border-color: @carrot;
+	background-color: @orange !important;
+	border-color: @carrot !important;
 	&:hover{
-		background-color: @carrot;
+		background-color: @carrot !important;
 	}
 	&:active{
-		background-color: darken(@carrot, 5%);
+		background-color: darken(@carrot, 5%) !important;
 	}
 }
 
@@ -97,7 +96,7 @@
 
 	&:hover{
 		cursor: pointer;
-		background-color: @silver;
+		background-color: @silver !important;
 		box-shadow: 0 2px fade(@black, 50%);
 	}
 	&:active{

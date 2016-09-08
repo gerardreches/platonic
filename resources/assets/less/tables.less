@@ -16,10 +16,12 @@ table{
 		text-align: left;
 		font-weight: bold;
 		padding: 0.5rem;
+		vertical-align: bottom;
 	}
 	> tbody > tr > td{
 		border-top: 1px solid @silver;
 		padding: 0.5rem;
+		vertical-align: baseline;
 	}
 
 	@media @tablet{
@@ -29,7 +31,8 @@ table{
 
 .bordered-table{
 	> thead > tr > th,
-	> tbody > tr > td{
+	> tbody > tr > td,
+	th, td{
 		border: 1px solid @silver;
 	}
 }
