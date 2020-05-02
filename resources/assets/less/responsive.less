@@ -6,6 +6,10 @@
 // PLATONIC RESPONSIVE HELPERS
 //--------------------------------------------------------------------------
 
+.hidden{
+	display: none !important;
+}
+
 .generate-responsive-helpers(length(@queries-list));
 
 .generate-responsive-helpers(@number, @i: 1) when (@i =< @number) {

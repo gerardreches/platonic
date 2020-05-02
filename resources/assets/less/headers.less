@@ -27,8 +27,18 @@
 
 	color: black;
 	background-color: @clouds;
+
+	.header-group{
+		width: auto;
+		height: 100%;
+
+		.display-flex();
+		.flex-flow(row, nowrap);
+		.justify-content(flex-start);
+		.align-items(center);
+	}
 	
-	> .header-item, > .header-button, > .header-dropdown, > .header-title{
+	.header-item, .header-button, .header-dropdown, .header-title{
 		display: block;
 		height: 100%;
 		padding: 0.5rem 1rem;
@@ -44,19 +54,19 @@
 		}
 	}
 	
-	> .header-title{
+	.header-title{
 		font-size: 1.8rem;
 		cursor: default;
 	}
 
-	> .header-button, .header-dropdown{
+	.header-button, .header-dropdown{
 		&:hover{
 			background-color: rgba(0,0,0,0.1);
 			cursor: pointer;
 		}
 	}
 	
-	> .header-button{
+	.header-button{
 		position: relative;
 		> a{
 			color: inherit;
@@ -68,7 +78,7 @@
 		}
 	}
 
-	> .header-dropdown{
+	.header-dropdown{
 		position: relative;
 		> ul{
 			display: none;

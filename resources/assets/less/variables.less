@@ -10,13 +10,14 @@
 //--------------------------------------------------------------------------
 
 // Breakpoints
+@size-for-mobile: @size-for-phablet - 1px;   
 @size-for-phablet: 32rem;	
 @size-for-tablet: 48rem;	
 @size-for-laptop: 64rem;	
 @size-for-desktop: 80rem;
 
 // Queries
-@mobile: ~"screen and (max-width: @{size-for-phablet} - 1px)";
+@mobile: ~"screen and (max-width: @{size-for-mobile})";
 @phablet: ~"screen and (min-width: @{size-for-phablet})";
 @tablet: ~"screen and (min-width: @{size-for-tablet})";
 @laptop: ~"screen and (min-width: @{size-for-laptop})";
